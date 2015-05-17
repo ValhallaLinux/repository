@@ -72,7 +72,7 @@ build() {
   ${srcdir}/${_basedir}/configure --prefix=/usr \
       --libdir=/usr/lib --libexecdir=/usr/lib \
       --mandir=/usr/share/man --infodir=/usr/share/info \
-      --with-bugurl=https://bugs.archlinux.org/ \
+      --with-bugurl=https://github.com/ValhallaLinux/repository/issues \
       --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++ \
       --enable-shared --enable-threads=posix --enable-libmpx \
       --with-system-zlib --with-isl --enable-__cxa_atexit \
@@ -86,7 +86,7 @@ build() {
       --with-default-libstdcxx-abi=c++98
 
   make
-  
+
   # make documentation
   make -C $CHOST/libstdc++-v3/doc doc-man-doxygen
 }
@@ -112,10 +112,10 @@ package_gcc-libs()
   install=gcc-libs.install
 
   cd ${srcdir}/gcc-build
-  
+
   make -C $CHOST/libgcc DESTDIR=${pkgdir} install-shared
   rm ${pkgdir}/${_libdir}/libgcc_eh.a
-  
+
   for lib in libatomic \
              libcilkrts \
              libgfortran \
@@ -167,7 +167,7 @@ package_gcc()
 
   make -C $CHOST/libgcc DESTDIR=${pkgdir} install
   rm ${pkgdir}/usr/lib/libgcc_s.so*
-  
+
   make -C $CHOST/libstdc++-v3/src DESTDIR=${pkgdir} install
   make -C $CHOST/libstdc++-v3/include DESTDIR=${pkgdir} install
   make -C $CHOST/libstdc++-v3/libsupc++ DESTDIR=${pkgdir} install
@@ -181,7 +181,7 @@ package_gcc()
 
   make DESTDIR=${pkgdir} install-fixincludes
   make -C gcc DESTDIR=${pkgdir} install-mkheaders
-  
+
   make -C lto-plugin DESTDIR=${pkgdir} install
   install -dm755 ${pkgdir}/usr/lib/bfd-plugins/
   ln -s /usr/lib/gcc/$CHOST/${pkgver}/liblto_plugin.so \
