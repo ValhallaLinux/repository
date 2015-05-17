@@ -1,0 +1,20 @@
+# $Id$
+# Contributor: Federico Cinelli <cinelli@aur.archlinux.org>
+
+pkgname=screenfetch
+pkgver=3.6.5
+pkgrel=1
+pkgdesc="CLI Bash script to show system/theme info in screenshots"
+arch=('any')
+url="https://github.com/KittyKatt/screenFetch"
+license=('GPL')
+depends=('bash' 'xorg-xdpyinfo' 'xorg-xprop')
+optdepends=('scrot: To take screenshot')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/KittyKatt/screenFetch/archive/v$pkgver.tar.gz")
+md5sums=('562ae735dd3dd41f20c74a9047cdf05f')
+
+package() {
+	cd "$srcdir/screenFetch-$pkgver"
+	install -Dm755 "screenfetch-dev" "$pkgdir/usr/bin/screenfetch"
+	install -Dm644 "screenfetch.1" "$pkgdir/usr/share/man/man1/screenfetch.1"
+}
