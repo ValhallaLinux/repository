@@ -1,0 +1,43 @@
+# $Id$
+# Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+# Contributor: Alexander Rødseth <rodseth@gmail.com>
+# Contributor: Jon Nordby <jononor@gmail.com>
+
+pkgname=libwebp
+pkgver=0.4.3
+pkgrel=1
+pkgdesc="WebP library and conversion tools"
+arch=(x86_64 i686)
+url="https://developers.google.com/speed/webp/"
+license=(BSD)
+depends=(libpng libjpeg libtiff giflib)
+makedepends=(freeglut mesa glu)
+optdepends=('freeglut: vwebp viewer')
+source=("http://downloads.webmproject.org/releases/webp/$pkgname-$pkgver.tar.gz")
+sha256sums=('efbe0d58fda936f2ed99d0b837ed7087d064d6838931f282c4618d2a3f7390c4')
+
+prepare() {
+  cd "$srcdir/$pkgname-$pkgver"
+}
+
+build() {
+  cd "$srcdir/$pkgname-$pkgver"
+
+  ./configure --prefix=/usr \
+     --enable-swap-16bit-csp \
+     --enable-experimental \
+     --enable-libwebpmux \
+     --enable-libwebpdemux \
+     --enable-libwebpdecoder \
+     --disable-static
+  make
+}
+
+package() {
+  cd "$srcdir/$pkgname-$pkgver"
+
+  make DESTDIR="$pkgdir/" install
+  install -Dm644 COPYING "$pkgdir/usr/share/licenses/$pkgname/COPYING"
+}
+
+# vim:set ts=2 sw=2 et:
