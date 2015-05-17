@@ -1,0 +1,27 @@
+# $Id$
+# Maintainer: Ionut Biru <ibiru@archlinux.org>
+
+pkgname=libgusb
+pkgver=0.2.4
+pkgrel=1
+pkgdesc="GLib wrapper around libusb1"
+arch=('i686' 'x86_64')
+url="https://github.com/hughsie/libgusb"
+license=('LGPL2.1')
+depends=('udev' 'libusbx')
+makedepends=('gobject-introspection' 'python2')
+source=(http://people.freedesktop.org/~hughsient/releases/$pkgname-$pkgver.tar.xz)
+sha256sums=('437966fb45e30b8e757b2c200daf5d4e7dd22bf5aa80e151e3b1807270d38083')
+
+build() {
+  cd $pkgname-$pkgver
+  ./configure --prefix=/usr --disable-static
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+}
+
+# vim:set ts=2 sw=2 et:
