@@ -1,0 +1,30 @@
+# $Id$
+# Maintainer: Tobias Powalowski <tpowa@archlinux.org>
+# Maintainer: Thomas Baechler <thomas@archlinux.org>
+
+pkgname=linux-manpages
+pkgver=3.19
+pkgrel=1
+pkgdesc="Kernel hackers manual - Section 9 manpages that comes with the Linux kernel."
+arch=('any')
+url="http://www.kernel.org"
+license=('GPL2')
+makedepends=('xmlto' 'docbook-xsl')
+replaces=('kernel26-manpages')
+conflicts=('kernel26-manpages')
+provides=('kernel26-manpages')
+source=("https://www.kernel.org/pub/linux/kernel/v3.x/linux-${pkgver}.tar.xz")
+sha256sums=('be42511fe5321012bb4a2009167ce56a9e5fe362b4af43e8c371b3666859806c')
+
+build() {
+  cd "${srcdir}/linux-$pkgver"
+  make mandocs
+}
+
+package() {
+  install -d "${pkgdir}/usr/share/man/man9/"
+  install "${srcdir}"/linux-$pkgver/Documentation/DocBook/man/*.9.gz \
+    "${pkgdir}/usr/share/man/man9/"
+
+  find "${pkgdir}" -type f -exec chmod 644 {} \;
+}

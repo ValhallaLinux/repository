@@ -1,0 +1,35 @@
+# $Id$
+# Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+
+pkgname=file-roller
+pkgver=3.16.2
+pkgrel=1
+pkgdesc="Create and modify archives"
+arch=('i686' 'x86_64')
+license=('GPL')
+depends=('desktop-file-utils' 'gtk3' 'hicolor-icon-theme' 'dconf' 'libarchive' 'file' 'json-glib' 'libnotify' 'p7zip')
+makedepends=('intltool' 'pkg-config' 'libnautilus-extension' 'itstool' 'docbook-xsl')
+optdepends=('lrzip: lrzip archive support'
+            'unace: extraction tool for the proprietary ace archive format')
+groups=('gnome-extra')
+options=('!emptydirs')
+install=file-roller.install
+url="http://www.gnome.org"
+source=(http://ftp.gnome.org/pub/gnome/sources/$pkgname/${pkgver:0:4}/$pkgname-$pkgver.tar.xz)
+sha256sums=('60897ff24d4822395a227b62811c3b8768b701844961e93303d6d6d9463d7e3f')
+
+build() {
+  cd $pkgname-$pkgver
+
+  ./configure --prefix=/usr --sysconfdir=/etc \
+      --libexecdir=/usr/lib/file-roller \
+      --localstatedir=/var --disable-static \
+      --disable-schemas-compile
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+}
