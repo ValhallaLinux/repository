@@ -1,0 +1,28 @@
+# $Id$
+# Maintainer: Jan de Groot <jgc@archlinux.org>
+
+pkgname=libvdpau
+pkgver=1.1
+pkgrel=1
+pkgdesc="Nvidia VDPAU library"
+arch=(i686 x86_64)
+url='http://cgit.freedesktop.org/~aplattner/libvdpau'
+depends=('gcc-libs' 'libxext')
+license=('custom')
+source=(http://people.freedesktop.org/~aplattner/vdpau/${pkgname}-${pkgver}.tar.gz)
+makedepends=('dri2proto')
+sha256sums=('aea4e783f220bf26ba2139ccd866a0ee5005fa03af5e08c41fbc939118263919')
+
+build() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  ./configure --prefix=/usr --sysconfdir=/etc
+  make
+}
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  make DESTDIR="${pkgdir}" install
+
+  install -d -m755 "${pkgdir}/usr/share/licenses/${pkgname}"
+  install -m644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/"
+}
