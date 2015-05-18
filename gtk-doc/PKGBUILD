@@ -1,0 +1,28 @@
+# $Id$
+# Maintainer: Jan de Groot <jgc@archlinux.org>
+
+pkgname=gtk-doc
+pkgver=1.22
+pkgrel=1
+pkgdesc="Documentation tool for public library API"
+arch=('any')
+license=('GPL' 'FDL')
+depends=('docbook-xsl' 'yelp-tools' 'perl' 'source-highlight')
+makedepends=('pkgconfig' 'jade' 'itstool' 'dblatex')
+optdepends=('jade: SGML support'
+            'dblatex: PDF support')
+url="http://www.gtk.org/gtk-doc/"
+source=(http://ftp.gnome.org/pub/gnome/sources/${pkgname}/${pkgver}/${pkgname}-${pkgver}.tar.xz)
+sha256sums=('932865c912ce0d81c9480bf957d3908bae6e18c0cf2ee33014d63b920047fca8')
+
+build() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  export PYTHON=/usr/bin/python2
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  make DESTDIR="${pkgdir}" install
+}

@@ -43,7 +43,7 @@ build() {
 
   ${srcdir}/binutils-gdb/configure --prefix=/usr \
     --with-lib-path=/usr/lib:/usr/local/lib \
-    --with-bugurl=https://bugs.archlinux.org/ \
+    --with-bugurl=https://github.com/ValhallaLinux/repository/issues \
     --enable-threads --enable-shared --with-pic \
     --enable-ld=default --enable-gold --enable-plugins \
     --disable-werror --disable-gdb
@@ -56,7 +56,7 @@ build() {
 
 check() {
   cd ${srcdir}/binutils-build
-  
+
   # unset LDFLAGS as testsuite makes assumptions about which ones are active
   # ignore failures in gold testsuite...
   make -k LDFLAGS="" check || true
