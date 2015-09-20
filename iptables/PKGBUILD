@@ -51,11 +51,14 @@ prepare() {
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
 
- ./configure --prefix=/usr \
-     --libexecdir=/usr/lib/iptables --sysconfdir=/etc \
-     --with-xtlibdir=/usr/lib/iptables \
-     --enable-devel --enable-shared \
-     --sbindir=/usr/bin
+ ./configure \
+   --prefix=/usr \
+   --libexecdir=/usr/lib/iptables \
+   --sysconfdir=/etc \
+   --with-xtlibdir=/usr/lib/iptables \
+   --enable-devel \
+   --enable-shared \
+   --sbindir=/usr/bin
   make
 }
 

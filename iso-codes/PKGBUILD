@@ -15,7 +15,8 @@ validpgpkeys=('60A031EEAB8EFA24001DF0A283FD1C4682D138E0')  # Tobias Quathamer
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

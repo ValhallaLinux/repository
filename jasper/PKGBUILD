@@ -19,10 +19,10 @@ source=(http://www.ece.uvic.ca/~mdadams/${pkgname}/software/${pkgname}-${pkgver}
         CVE-2014-8137.patch
         jasper-avoid-assert-abort.diff
         CVE-2014-8138.patch CVE-2014-9029.patch
-	      CVE-2011-4516-and-CVE-2011-4517.patch
+	    CVE-2011-4516-and-CVE-2011-4517.patch
         jasper-1.900.1-fix-filename-buffer-overflow.patch
-	      CVE-2014-8157.patch
-	      CVE-2014-8158.patch
+	    CVE-2014-8157.patch
+	    CVE-2014-8158.patch
         CVE-2008-3521.patch)
 sha1sums=('9c5735f773922e580bf98c7c7dfda9bbed4c5191'
           'f298566fef08c8a589d072582112cd51c72c3983'
@@ -58,7 +58,10 @@ prepare() {
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr --mandir=/usr/share/man --enable-shared
+  ./configure \
+    --prefix=/usr \
+    --mandir=/usr/share/man \
+    --enable-shared
   make
 }
 

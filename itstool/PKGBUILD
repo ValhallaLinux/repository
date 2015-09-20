@@ -21,7 +21,9 @@ prepare() {
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr PYTHON=/usr/bin/python2
+  ./configure \
+    --prefix=/usr \
+    PYTHON=/usr/bin/python2
   make
 }
 

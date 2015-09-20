@@ -22,8 +22,12 @@ prepare() {
 build() {
   unset CPPFLAGS
   cd mozjs-$pkgver/js/src
-  ./configure --prefix=/usr --with-system-nspr --enable-system-ffi \
-     --enable-readline --enable-threadsafe
+  ./configure \
+    --prefix=/usr \
+    --with-system-nspr \
+    --enable-system-ffi \
+    --enable-readline \
+    --enable-threadsafe
   make
 }
 
