@@ -8,7 +8,7 @@ pkgdesc="Portable bandwidth monitor and rate estimator"
 arch=('i686' 'x86_64')
 url="http://github.com/tgraf/bmon/"
 license=('MIT' 'BSD')
-depends=('ncurses' 'libnl' 'confuse')
+depends=('ncurses' 'libnl' 'confuse' 'gnome-common')
 makedepends=('autoconf')
 source=($pkgname-$pkgver.tar.gz::http://github.com/tgraf/$pkgname/archive/v$pkgver.tar.gz
         bmon-assertion.patch)
@@ -25,7 +25,9 @@ build() {
   cd "${srcdir}"/$pkgname-$pkgver
 
   ./autogen.sh
-  ./configure --prefix=/usr --sysconfdir=/etc
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc
   make
 }
 

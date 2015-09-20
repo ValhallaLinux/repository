@@ -24,7 +24,10 @@ build() {
 
    cd ${pkgbase}_${_boostver}
 
-   ./bootstrap.sh --with-toolset=gcc --with-icu --with-python=/usr/bin/python2
+   ./bootstrap.sh \
+     --with-toolset=gcc \
+     --with-icu \
+     --with-python=/usr/bin/python2
 
    _bindir="bin.linuxx86"
    [[ "${CARCH}" = "x86_64" ]] && _bindir="bin.linuxx86_64"
