@@ -4,7 +4,7 @@
 # Contributor: Eric Johnson <eric.archlinux.org>
 
 pkgname=libidn
-pkgver=1.30
+pkgver=1.32
 pkgrel=1
 pkgdesc="Implementation of the Stringprep, Punycode and IDNA specifications"
 url="http://www.gnu.org/software/libidn/"
