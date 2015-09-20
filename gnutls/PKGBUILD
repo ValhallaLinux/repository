@@ -3,7 +3,7 @@
 # Maintainer: Andreas Radke <andyrtr@archlinux.org>
 
 pkgname=gnutls
-pkgver=3.4.1
+pkgver=3.4.5
 pkgrel=1
 pkgdesc="A library which provides a secure layer over a reliable transport layer"
 arch=('i686' 'x86_64')
