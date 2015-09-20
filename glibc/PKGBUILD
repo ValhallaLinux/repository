@@ -7,8 +7,8 @@
 # NOTE: adjust version in install script when locale files are updated
 
 pkgname=glibc
-pkgver=2.21
-pkgrel=4
+pkgver=2.22
+pkgrel=1
 pkgdesc="GNU C Library"
 arch=('i686' 'x86_64')
 url="http://www.gnu.org/software/libc"
