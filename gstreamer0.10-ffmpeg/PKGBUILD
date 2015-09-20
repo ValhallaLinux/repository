@@ -17,7 +17,13 @@ sha256sums=('SKIP')
 build() {
   cd gst-ffmpeg
   NOCONFIGURE=1 ./autogen.sh
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static --enable-gtk-doc --with-ffmpeg-extra-configure="--enable-runtime-cpudetect"
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --enable-gtk-doc \
+    --with-ffmpeg-extra-configure="--enable-runtime-cpudetect"
   make
 }
 

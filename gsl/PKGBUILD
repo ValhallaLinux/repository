@@ -19,7 +19,8 @@ build() {
     unset LDFLAGS
 
     cd "${srcdir}/${pkgname}-${pkgver}"
-    ./configure --prefix=/usr
+    ./configure \
+      --prefix=/usr
     make
 }
 

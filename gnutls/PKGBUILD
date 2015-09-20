@@ -40,7 +40,8 @@ build() {
 	--with-zlib \
 	--disable-static \
 	--without-idn \
-	--enable-guile --with-guile-site-dir=no \
+	--enable-guile \
+	--with-guile-site-dir=no \
 	--with-default-trust-store-pkcs11="pkcs11:model=p11-kit-trust;manufacturer=PKCS%2311%20Kit"
   make
 }

@@ -37,7 +37,9 @@ build() {
     if [ -d "${i}" ]; then
       pushd "${i}"
       autoreconf -fi
-      ./configure --prefix=/usr --mandir=/usr/share/man
+      ./configure \
+        --prefix=/usr \
+        --mandir=/usr/share/man
       make
       popd
     fi

@@ -28,7 +28,9 @@ md5sums=('2171cea3bbe053036fb5d5d25176a160')
 build() {
   cd "$pkgname-$pkgver"
 
-  ./configure --prefix=/usr --enable-frame-pointers
+  ./configure \
+    --prefix=/usr \
+    --enable-frame-pointers
   make
 }
 

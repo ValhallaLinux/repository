@@ -18,9 +18,11 @@ md5sums=('2c5c7a418e5eb3268f65e21993277fba'
 build() {
   cd "$srcdir/$pkgname-$pkgver"
   patch -Np1 -i "$srcdir/remove-legacy-calc.patch"
-  ./configure --prefix=/usr --sysconfdir=/etc \
-              --libexecdir=/usr/lib/icon-naming-utils \
-	      --localstatedir=/var
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --libexecdir=/usr/lib/icon-naming-utils \
+	--localstatedir=/var
   make
 }
 package() {

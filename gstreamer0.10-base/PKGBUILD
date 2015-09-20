@@ -39,10 +39,16 @@ prepare() {
 build() {
   cd gst-plugins-base
   NOCONFIGURE=1 ./autogen.sh
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-    --disable-static --enable-experimental --disable-gnome_vfs --disable-gtk-doc \
-    --with-package-name="GStreamer Base Plugins (Archlinux)" \
-    --with-package-origin="http://www.archlinux.org/"
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --enable-experimental \
+    --disable-gnome_vfs \
+    --disable-gtk-doc \
+    --with-package-name="GStreamer Base Plugins (Valhalla hlinux)" \
+    --with-package-origin="http://www.valhallalinux.com/"
   make
   sed -e 's/^SUBDIRS_EXT =.*/SUBDIRS_EXT =/' -i Makefile
 }

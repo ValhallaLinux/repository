@@ -29,7 +29,9 @@ md5sums=('43c48064d6409862b8a850db83c8038a'
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --without-included-regex
+  ./configure \
+    --prefix=/usr \
+    --without-included-regex
   make
 }
 

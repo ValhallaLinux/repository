@@ -26,10 +26,15 @@ prepare() {
 build() {
   cd gstreamer
   NOCONFIGURE=1 ./autogen.sh
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib \
-    --with-package-name="GStreamer (Archlinux)" \
-    --with-package-origin="http://www.archlinux.org/" \
-    --disable-gtk-doc --disable-static
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib \
+    --with-package-name="GStreamer (Valhalla Linux)" \
+    --with-package-origin="http://www.valhallalinux.com/" \
+    --disable-gtk-doc \
+    --disable-static
   make
 }
 

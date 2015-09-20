@@ -18,7 +18,8 @@ sha256sums=('932865c912ce0d81c9480bf957d3908bae6e18c0cf2ee33014d63b920047fca8')
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   export PYTHON=/usr/bin/python2
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

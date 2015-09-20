@@ -14,10 +14,11 @@ md5sums=('18661a8fdfef13e2fcb7651720aa53f3')
 
 build() {
   cd guile-$pkgver
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
 	--disable-static  \
 	--disable-error-on-warning \
-        --program-suffix=1.8
+    --program-suffix=1.8
   make LDFLAGS+="-lpthread"
 }
 

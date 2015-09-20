@@ -19,7 +19,10 @@ prepare() {
 
 build() {
   cd $pkgbase-$pkgver
-  PYTHON=/usr/bin/python2 ./configure --prefix=/usr --disable-static --enable-doctool
+  PYTHON=/usr/bin/python2 ./configure \
+    --prefix=/usr \
+    --disable-static \
+    --enable-doctool
   make
 }
 

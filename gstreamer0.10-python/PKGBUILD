@@ -17,7 +17,8 @@ build() {
   cd "${srcdir}/gst-python-${pkgver}"
   export PYTHON=python2
   sed -i -e 's%^#!.*env python$%#!/usr/bin/env python2%' examples/* gst/extend/*.py
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

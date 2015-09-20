@@ -16,9 +16,12 @@ sha256sums=('669e9846ca744ec4d04ce61377e85df7ca909ad476329922a6abf4da423f1b0c')
 
 build() {
   cd "$_pkgbasename-$pkgver"
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --localstatedir=/var --disable-static \
-      --enable-glade-catalog
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --enable-glade-catalog
   make
 }
 

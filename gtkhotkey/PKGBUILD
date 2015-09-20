@@ -27,8 +27,9 @@ build() {
   sed -i 's|glib/gquark\.h|glib.h|' src/gtk-hotkey-error.h
   sed -i 's|glib/gtypes\.h|glib.h|' src/x11/tomboykeybinder.h
  
-  ./configure --prefix=/usr \
-              --disable-static
+  ./configure \
+    --prefix=/usr \
+    --disable-static
   make
 }
  

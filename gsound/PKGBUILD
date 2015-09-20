@@ -15,7 +15,9 @@ sha256sums=('ea0dd94429c0645f2f98824274ef04543fe459dd83a5449a68910acc3ba67f29')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --disable-static
+  ./configure \
+    --prefix=/usr \
+    --disable-static
 
   # https://bugzilla.gnome.org/show_bug.cgi?id=655517
   #sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool

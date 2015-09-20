@@ -17,10 +17,15 @@ sha256sums=('79b1b5f3f7bcaa8a615202eb5e176121eeb8336960f70687e536ad78dbc7e641')
 build() {
   cd $pkgname-$pkgver
 
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-    --disable-static --enable-experimental --enable-gtk-doc \
-    --with-package-name="GStreamer Good Plugins (Arch Linux)" \
-    --with-package-origin="http://www.archlinux.org/"
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --enable-experimental \
+    --enable-gtk-doc \
+    --with-package-name="GStreamer Good Plugins (Valhalla Linux)" \
+    --with-package-origin="http://www.valhallalinux.com/"
 
   # https://bugzilla.gnome.org/show_bug.cgi?id=655517
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool

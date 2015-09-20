@@ -27,14 +27,18 @@ prepare() {
 build() {
   cd gst-plugins-good
   NOCONFIGURE=1 ./autogen.sh
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-    --disable-static --enable-experimental \
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --enable-experimental \
     --disable-schemas-install \
     --disable-hal \
     --disable-esd \
     --disable-gtk-doc \
-    --with-package-name="GStreamer Good Plugins (Archlinux)" \
-    --with-package-origin="http://www.archlinux.org/"
+    --with-package-name="GStreamer Good Plugins (Valhalla linux)" \
+    --with-package-origin="http://www.valhallalinux.com/"
 
   make
   sed -e 's/gst sys ext/gst/' -i Makefile

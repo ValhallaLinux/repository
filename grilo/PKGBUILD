@@ -17,7 +17,11 @@ sha256sums=('55b4663550bc8185f8db232e96b9ba99fbfa9175e31e7321fa5ccaacf3617b85')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
-  ./configure --prefix=/usr --sysconfdir=/etc --disable-static --disable-debug \
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --disable-static \
+    --disable-debug \
     --libdir=/usr/lib
   make
 }

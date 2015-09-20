@@ -19,9 +19,13 @@ sha256sums=('0a3fa996ae271c8f4812a7d8dc573ece0c000d63185b4865fa99387455e1b13d')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --localstatedir=/var --disable-static \
-      --disable-schemas-compile  --enable-introspection
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --disable-schemas-compile \
+    --enable-introspection
   make
 }
 

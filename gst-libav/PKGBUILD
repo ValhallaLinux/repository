@@ -22,10 +22,14 @@ prepare() {
 build() {
   cd $pkgname-$pkgver
 
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-    --disable-static --with-libav-extra-configure="--enable-runtime-cpudetect" \
-    --with-package-name="GStreamer libav Plugin (Arch Linux)" \
-    --with-package-origin="http://www.archlinux.org/"
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --with-libav-extra-configure="--enable-runtime-cpudetect" \
+    --with-package-name="GStreamer libav Plugin (Valhalla Linux)" \
+    --with-package-origin="http://www.valhallalinux.com/"
 
   # https://bugzilla.gnome.org/show_bug.cgi?id=655517
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool

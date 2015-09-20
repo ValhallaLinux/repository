@@ -15,11 +15,14 @@ sha256sums=('d38367ce189415c36fd19dca478bc9b80694b495c3458e74fb0f13d1ac9df1f9')
 build() {
   cd "$pkgbase-$pkgver"
   autoreconf -fi
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --localstatedir=/var --disable-static \
-      --libexecdir=/usr/lib/gvfs \
-      --with-bash-completion-dir=/usr/share/bash-completion/completions \
-      --disable-obexftp
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --libexecdir=/usr/lib/gvfs \
+    --with-bash-completion-dir=/usr/share/bash-completion/completions \
+    --disable-obexftp
   make
 }
 

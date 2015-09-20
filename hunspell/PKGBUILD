@@ -16,8 +16,12 @@ md5sums=('4967da60b23413604c9e563beacc63b4')
 
 build() {
   cd "$srcdir/hunspell-$pkgver"
-  ./configure --prefix=/usr --disable-static \
-	--with-ui --with-readline --with-experimental
+  ./configure \
+    --prefix=/usr \
+    --disable-static \
+	--with-ui \
+	--with-readline \
+	--with-experimental
   make
 }
 

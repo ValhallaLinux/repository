@@ -10,7 +10,7 @@ pkgdesc="GObject-based multi-platform GUI toolkit"
 arch=(i686 x86_64)
 url="http://www.gtk.org/"
 depends=(atk cairo libcups libxcursor libxinerama libxrandr libxi libepoxy gdk-pixbuf2
-         libxcomposite libxdamage pango shared-mime-info colord at-spi2-atk wayland libxkbcommon
+         libxcomposite arc-gtk-theme libxdamage pango shared-mime-info colord at-spi2-atk wayland libxkbcommon
          adwaita-icon-theme json-glib rest)
 makedepends=(gobject-introspection libcanberra)
 license=(LGPL)
@@ -26,13 +26,14 @@ prepare() {
 build() {
     cd "gtk+-$pkgver"
 
-    CXX=/bin/false ./configure --prefix=/usr \
-        --sysconfdir=/etc \
-        --localstatedir=/var \
-        --disable-schemas-compile \
-        --enable-x11-backend \
-        --enable-broadway-backend \
-        --enable-wayland-backend
+    CXX=/bin/false ./configure \
+      --prefix=/usr \
+      --sysconfdir=/etc \
+      --localstatedir=/var \
+      --disable-schemas-compile \
+      --enable-x11-backend \
+      --enable-broadway-backend \
+      --enable-wayland-backend
 
     #https://bugzilla.gnome.org/show_bug.cgi?id=655517
     sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool

@@ -15,8 +15,13 @@ sha256sums=('1771d53583be6d91ca961854b2a24fb239ef0545eed221ae3349abae0ab8321f')
 
 build() {
   cd $pkgbase-$pkgver
-  ./configure --prefix=/usr \
-    --with-glib --with-freetype --with-cairo --with-icu --with-graphite2 \
+  ./configure \
+    --prefix=/usr \
+    --with-glib \
+    --with-freetype \
+    --with-cairo \
+    --with-icu \
+    --with-graphite2 \
     --with-gobject
   make
 }

@@ -17,7 +17,10 @@ sha1sums=('456d8e8bc9f76e8f16318172d2b61c18e61c7da0')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --disable-static --disable-builtin-libvpx
+  ./configure \
+    --prefix=/usr \
+    --disable-static \
+    --disable-builtin-libvpx
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
   make
 }
