@@ -20,11 +20,14 @@ prepare() {
 
 build() {
   cd build-py2
-  ../${pkgbase}-${pkgver}/configure --prefix=/usr --with-python=/usr/bin/python2
+  ../${pkgbase}-${pkgver}/configure \
+    --prefix=/usr \
+    --with-python=/usr/bin/python2
   make
 
   cd ../build-py3
-  ../${pkgbase}-${pkgver}/configure --prefix=/usr
+  ../${pkgbase}-${pkgver}/configure \
+    --prefix=/usr
   make
 }
 

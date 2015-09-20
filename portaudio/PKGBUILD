@@ -21,7 +21,9 @@ md5sums=('7f220406902af9dca009668e198cbd23')
 build() {
   cd "$srcdir/$pkgname"
 
-  ./configure --prefix=/usr --enable-cxx
+  ./configure \
+    --prefix=/usr \
+    --enable-cxx
   make
 }
 

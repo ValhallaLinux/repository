@@ -17,10 +17,14 @@ source=(http://www.freedesktop.org/software/polkit/releases/$pkgname-$pkgver.tar
 build() {
   cd $pkgname-$pkgver
 
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --localstatedir=/var --libexecdir=/usr/lib/polkit-1 \
-      --enable-libsystemd-login=yes --disable-static \
-      --enable-gtk-doc
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib/polkit-1 \
+    --enable-libsystemd-login=yes \
+    --disable-static \
+    --enable-gtk-doc
   make
 }
 

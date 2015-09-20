@@ -61,15 +61,16 @@ build() {
   cd "${srcdir}/Python-${pkgver}"
 
   export OPT="${CFLAGS}"
-  ./configure --prefix=/usr \
-              --enable-shared \
-              --with-threads \
-              --enable-ipv6 \
-              --enable-unicode=ucs4 \
-              --with-system-expat \
-              --with-system-ffi \
-              --with-dbmliborder=gdbm:ndbm \
-              --without-ensurepip
+  ./configure 
+    --prefix=/usr \
+    --enable-shared \
+    --with-threads \
+    --enable-ipv6 \
+    --enable-unicode=ucs4 \
+    --with-system-expat \
+    --with-system-ffi \
+    --with-dbmliborder=gdbm:ndbm \
+    --without-ensurepip
 
   make
 }

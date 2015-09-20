@@ -17,12 +17,16 @@ md5sums=('a97985f7af6c388e42a53dead85d4ef4'
 
 build() {
   cd ${pkgbase}-${pkgver}
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --localstatedir=/var --disable-static \
-      --enable-cairo-output \
-      --enable-xpdf-headers \
-      --enable-libjpeg --enable-zlib \
-      --enable-poppler-glib
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --enable-cairo-output \
+    --enable-xpdf-headers \
+    --enable-libjpeg \
+    --enable-zlib \
+    --enable-poppler-glib
   make
 }
 

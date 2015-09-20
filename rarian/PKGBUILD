@@ -18,8 +18,11 @@ md5sums=('75091185e13da67a0ff4279de1757b94'
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   patch -Np0 -i ../user-segfault.patch
-  ./configure --prefix=/usr --sysconfdir=/etc \
-     --localstatedir=/var --disable-static
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static
   make
 }
 

@@ -22,10 +22,11 @@ build() {
   #for file in qt4/*.moc; do
   #     moc-qt4 ${file/.moc/.h} > ${file}
   # done
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
 	--enable-pinentry-curses \
 	--enable-pinentry-gtk2 \
-        --enable-pinentry-qt4 \
+    --enable-pinentry-qt4 \
 	--enable-fallback-curses
   make
 }

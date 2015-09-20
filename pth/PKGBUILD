@@ -16,13 +16,14 @@ sha1sums=('9a71915c89ff2414de69fe104ae1016d513afeee'
 build() {
   cd "$srcdir/$pkgname-$pkgver"
 
-  ./configure --prefix=/usr \
-              --sysconfdir=/etc \
-              --localstatedir=/var \
-              --mandir=/usr/share/man \
-              --disable-static \
-              --enable-shared \
-              --with-pic
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --mandir=/usr/share/man \
+    --disable-static \
+    --enable-shared \
+    --with-pic
 
   sed -i "s|awk=''|awk=/bin/awk|g" shtool # "Cannot find a reasonable Awk"
 
