@@ -13,11 +13,17 @@ url="http://www.freedesktop.org"
 source=(http://www.freedesktop.org/software/startup-notification/releases/${pkgname}-${pkgver}.tar.gz)
 md5sums=('2cd77326d4dcaed9a5a23a1232fb38e9')
 
-build() {
+prepare() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   sed -i -e '/AC_PATH_XTRA/d' configure.in
   autoreconf --force --install
-  ./configure --prefix=/usr --localstatedir=/var --sysconfdir=/etc
+}
+build() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  ./configure \
+    --prefix=/usr \
+    --localstatedir=/var \
+    --sysconfdir=/etc
   make
 }
 

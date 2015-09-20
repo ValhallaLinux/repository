@@ -21,7 +21,9 @@ build() {
   # https://bugs.archlinux.org/task/38836
   # https://bugs.freedesktop.org/show_bug.cgi?id=70366
   export ac_cv_func_fdatasync=no
-  ./configure --prefix=/usr --disable-update-mimedb
+  ./configure \
+    --prefix=/usr \
+    --disable-update-mimedb
   make
 }
 

@@ -19,10 +19,14 @@ prepare() {
 
 build() {
   cd build
-  ../SDL2-$pkgver/configure --prefix=/usr \
+  ../SDL2-$pkgver/configure \
+    --prefix=/usr \
     --enable-sdl-dlopen \
-    --disable-arts --disable-esd --disable-nas \
-    --enable-alsa --enable-pulseaudio-shared \
+    --disable-arts \
+    --disable-esd \
+    --disable-nas \
+    --enable-alsa \
+    --enable-pulseaudio-shared \
     --enable-video-wayland \
     --disable-rpath
   make

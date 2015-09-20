@@ -21,7 +21,9 @@ md5sums=('49b6306167724fe48f419a33a5beb857'
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --libexecdir=/usr/lib/tar
+  ./configure \
+    --prefix=/usr \
+    --libexecdir=/usr/lib/tar
   make
 }
 

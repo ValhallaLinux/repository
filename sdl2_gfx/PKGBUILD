@@ -18,7 +18,9 @@ build() {
   cd "${srcdir}/SDL2_gfx-${pkgver}"
 
   ./autogen.sh
-  ./configure --disable-static --prefix=/usr
+  ./configure \
+    --disable-static \
+    --prefix=/usr
   make
 }
 

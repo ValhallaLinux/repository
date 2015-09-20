@@ -23,9 +23,10 @@ build() {
    #_manstyle="/usr/share/xml/docbook/xsl-stylesheets-1.76.1/manpages/docbook.xsl"
    #sed -i "s#http.*xsl#$_manstyle#" tdb.mk
    export PYTHON=/usr/bin/python2
-   ./configure --prefix=/usr \
-               --localstatedir=/var \
-               --sysconfdir=/etc/samba
+   ./configure \
+     --prefix=/usr \
+     --localstatedir=/var \
+     --sysconfdir=/etc/samba
    make
 }
 

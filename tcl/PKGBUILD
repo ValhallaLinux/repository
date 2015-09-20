@@ -22,7 +22,10 @@ prepare() {
 build() {
   cd tcl${pkgver}/unix
   [[ $CARCH == "x86_64" ]] && BIT="--enable-64bit"
-  ./configure --prefix=/usr --mandir=/usr/share/man --enable-threads $BIT
+  ./configure \
+    --prefix=/usr \
+    --mandir=/usr/share/man \
+    --enable-threads $BIT
   make
 }
 

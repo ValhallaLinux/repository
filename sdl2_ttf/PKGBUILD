@@ -16,7 +16,9 @@ md5sums=('79787216b56cb4707f39d538f2225e00')
 build() {
   cd "${srcdir}/SDL2_ttf-${pkgver}/"
 
-  ./configure --disable-static --prefix=/usr
+  ./configure \
+    --disable-static \
+    --prefix=/usr
   make
 }
 

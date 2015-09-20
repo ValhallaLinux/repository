@@ -24,9 +24,13 @@ sha256sums=('770a5f03b8745054ef04cef9923dd713b1fbf309169150bc8dd32d7e5f7ee131'
 
 build() {
   cd "$pkgname-$pkgver"
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-      --enable-ldap --enable-hkp \
-      --disable-schemas-compile
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --enable-ldap \
+    --enable-hkp \
+    --disable-schemas-compile
   make
 }
 

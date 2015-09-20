@@ -29,7 +29,8 @@ build() {
   # build sqlite
   cd "$srcdir"/sqlite-autoconf-$_amalgamationver
 
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
 	--disable-static
   make
   
