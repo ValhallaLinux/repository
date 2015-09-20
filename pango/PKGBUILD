@@ -19,8 +19,11 @@ build() {
 
   rm -f pango-view/pango-view.1.in
 
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --localstatedir=/var --with-included-modules=basic-fc
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --with-included-modules=basic-fc
   make
 }
 

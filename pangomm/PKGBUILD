@@ -14,7 +14,8 @@ sha256sums=('a8d96952c708d7726bed260d693cece554f8f00e48b97cccfbf4f5690b6821f0')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 package_pangomm() {

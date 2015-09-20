@@ -23,7 +23,10 @@ build() {
   # install firmware in /usr/lib
   sed -i "s#/lib/firmware#/usr/lib/firmware#" src/extra/Makefile.in
 
-  ./configure --prefix=/usr --sbindir=/usr/bin --sysconfdir=/etc
+  ./configure \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
+    --sysconfdir=/etc
   make
 }
 

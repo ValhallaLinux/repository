@@ -26,10 +26,14 @@ prepare() {
 
 build() {
   cd "$pkgname-$pkgver"
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --libexecdir=/usr/lib/mutter \
-      --localstatedir=/var --disable-static \
-      --disable-schemas-compile --enable-compile-warnings=minimum
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --libexecdir=/usr/lib/mutter \
+    --localstatedir=/var \
+    --disable-static \
+    --disable-schemas-compile \
+    --enable-compile-warnings=minimum
 
   #https://bugzilla.gnome.org/show_bug.cgi?id=655517
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool

@@ -15,7 +15,9 @@ md5sums=('006c5e27fb78cdd14a628fdfa5aa1905')
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr --mandir=/usr/share/man
+  ./configure \
+    --prefix=/usr \
+    --mandir=/usr/share/man
   make
 }
 

@@ -20,9 +20,11 @@ prepare() {
 
 build() {
     cd ${pkgname}-${pkgver}
-    ./configure --prefix=/usr --sysconfdir=/etc \
-        --libexecdir=/usr/lib/notification-daemon-1.0 \
-        --localstatedir=/var --disable-static
+    ./configure \
+      --prefix=/usr --sysconfdir=/etc \
+      --libexecdir=/usr/lib/notification-daemon-1.0 \
+      --localstatedir=/var \
+      --disable-static
     make
 }
 

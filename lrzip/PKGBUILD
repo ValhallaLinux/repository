@@ -22,9 +22,12 @@ build() {
   CXXFLAGS="$CXXFLAGS -fomit-frame-pointer"
 
   if [[ $CARCH != x86_64 ]]; then
-    ./autogen.sh --prefix=/usr --enable-asm
+    ./autogen.sh \
+      --prefix=/usr \
+      --enable-asm
   else
-    ./autogen.sh --prefix=/usr
+    ./autogen.sh \
+      --prefix=/usr
   fi
 
   make

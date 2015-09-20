@@ -17,14 +17,15 @@ sha256sums=('d951eaffbe513bcde54f90602c6c423a49593f656d6485ba95f6fcb4bc1e8003')
 
 build() {
   cd ModemManager-$pkgver
-  ./configure --prefix=/usr \
-        --sysconfdir=/etc \
-        --localstatedir=/var \
-        --sbindir=/usr/bin \
-        --with-udev-base-dir=/usr/lib/udev \
-        --with-polkit=permissive \
-        --enable-gtk-doc \
-        --disable-static
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --sbindir=/usr/bin \
+    --with-udev-base-dir=/usr/lib/udev \
+    --with-polkit=permissive \
+    --enable-gtk-doc \
+    --disable-static
 
   # https://bugzilla.gnome.org/show_bug.cgi?id=655517
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool

@@ -24,7 +24,10 @@ validpgpkeys=('07F3DBBECC1A39605078094D980C197698C3739D')
 build() {
   cd "${srcdir}/${pkgname}-${_pkgver}"
   patch -p1 -i $srcdir/mpfr-${_pkgver}-${_patchlevel}.patch
-  ./configure --prefix=/usr --enable-thread-safe --enable-shared
+  ./configure \
+    --prefix=/usr \
+    --enable-thread-safe \
+    --enable-shared
   make
 }
 

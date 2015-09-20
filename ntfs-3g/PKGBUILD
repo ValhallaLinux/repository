@@ -28,14 +28,14 @@ prepare() {
 build() {
 	cd "${srcdir}/${_pkgname}-${pkgver}"
 	./configure \
-		--prefix=/usr \
-		--sbin=/usr/bin \
-		--mandir=/usr/share/man \
-		--disable-ldconfig \
-		--disable-static \
-		--with-fuse=external \
-		--enable-posix-acls \
-		--enable-extras \
+	  --prefix=/usr \
+	  --sbin=/usr/bin \
+	  --mandir=/usr/share/man \
+	  --disable-ldconfig \
+	  --disable-static \
+	  --with-fuse=external \
+	  --enable-posix-acls \
+	  --enable-extras \
 
 	make
 }

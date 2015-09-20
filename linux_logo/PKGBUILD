@@ -15,7 +15,8 @@ sha1sums=('bd22808f165574cb3bc98c579aa48c0acab65f39')
 build() {
   cd ${pkgname}-${pkgver}
   find ./logos -type f | sort > logo_config
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

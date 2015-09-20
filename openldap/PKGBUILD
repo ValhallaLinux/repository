@@ -34,12 +34,24 @@ prepare() {
 
 build() {
   cd ${pkgbase}-${pkgver}
-  ./configure --prefix=/usr --libexecdir=/usr/lib \
-    --sysconfdir=/etc --localstatedir=/var/lib/openldap --sbindir=/usr/bin \
-    --enable-dynamic --enable-syslog --enable-ipv6 --enable-local \
-    --enable-crypt --enable-spasswd --enable-modules \
-    --enable-backends --disable-ndb --enable-overlays=mod \
-    --with-cyrus-sasl --with-threads
+  ./configure \
+    --prefix=/usr \
+    --libexecdir=/usr/lib \
+    --sysconfdir=/etc \
+    --localstatedir=/var/lib/openldap \
+    --sbindir=/usr/bin \
+    --enable-dynamic \
+    --enable-syslog \
+    --enable-ipv6 \
+    --enable-local \
+    --enable-crypt \
+    --enable-spasswd \
+    --enable-modules \
+    --enable-backends \
+    --disable-ndb \
+    --enable-overlays=mod \
+    --with-cyrus-sasl \
+    --with-threads
   make
 
   cd contrib/slapd-modules/nssov

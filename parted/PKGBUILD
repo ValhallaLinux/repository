@@ -27,9 +27,9 @@ build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
 
   ./configure --prefix=/usr \
-              --sbindir=/usr/bin \
-              --disable-debug \
-              --disable-rpath
+    --sbindir=/usr/bin \
+    --disable-debug \
+    --disable-rpath
   make
 }
 

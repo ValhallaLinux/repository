@@ -35,8 +35,11 @@ validpgpkeys=('6645B0A8C7005E78DB1D7864F99FFE0FEAE999BD')  # Allan McRae <allan@
 build() {
   cd "$pkgname-$pkgver"
 
-  ./configure --prefix=/usr --sysconfdir=/etc \
-    --localstatedir=/var --enable-doc \
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --enable-doc \
     --with-scriptlet-shell=/usr/bin/bash \
     --with-ldconfig=/usr/bin/ldconfig
   make

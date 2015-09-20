@@ -20,7 +20,8 @@ validpgpkeys=('CDA01A4208C4F74506107E7BD1AB451688888888')
 
 build() {
   cd "$pkgname-$pkgver"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

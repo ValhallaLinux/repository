@@ -17,7 +17,8 @@ sha256sums=('3e17bfc505d304b3d21a784c06fc4b990cabdafd6886b47632496dfba0dea500')
 
 build() {
   cd NetworkManager-vpnc-${pkgver}
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
   	--sysconfdir=/etc \
 	--localstatedir=/var \
 	--libexecdir=/usr/lib/networkmanager \

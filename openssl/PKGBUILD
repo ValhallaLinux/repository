@@ -46,10 +46,13 @@ build() {
 	fi
 
 	# mark stack as non-executable: http://bugs.archlinux.org/task/12434
-	./Configure --prefix=/usr --openssldir=/etc/ssl --libdir=lib \
-		shared zlib ${optflags} \
-		"${openssltarget}" \
-		"-Wa,--noexecstack ${CPPFLAGS} ${CFLAGS} ${LDFLAGS}"
+	./Configure \
+	  --prefix=/usr \
+	  --openssldir=/etc/ssl \
+	  --libdir=lib \
+	  shared zlib ${optflags} \
+	  "${openssltarget}" \
+	  "-Wa,--noexecstack ${CPPFLAGS} ${CFLAGS} ${LDFLAGS}"
 
 	make depend
 	make

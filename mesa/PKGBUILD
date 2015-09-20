@@ -24,7 +24,8 @@ build() {
 
   #autoreconf -vfi # our automake is far too new for their build system :)
 
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
     --sysconfdir=/etc \
     --with-dri-driverdir=/usr/lib/xorg/modules/dri \
     --with-gallium-drivers=r300,r600,radeonsi,nouveau,svga,swrast \
@@ -46,7 +47,8 @@ build() {
     --enable-vdpau \
     --enable-omx \
     --enable-nine \
-    --enable-opencl --enable-opencl-icd \
+    --enable-opencl \
+    --enable-opencl-icd \
     --with-clang-libdir=/usr/lib
 
     # --help

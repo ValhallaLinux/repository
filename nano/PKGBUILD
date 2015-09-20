@@ -20,7 +20,8 @@ validpgpkeys=('8DA6FE7BFA7A418AB3CB2354BCB356DF91009FA7') # "Chris Allegretta <c
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
     --sysconfdir=/etc \
     --enable-color \
     --enable-nanorc \

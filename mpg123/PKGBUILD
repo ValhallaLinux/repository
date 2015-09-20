@@ -9,9 +9,8 @@ arch=('i686' 'x86_64')
 url="http://sourceforge.net/projects/mpg123"
 license=('LGPL2.1')
 depends=('libltdl' 'alsa-lib')
-makedepends=('sdl' 'jack' 'libpulse')
+makedepends=('sdl' 'libpulse')
 optdepends=('sdl: for sdl audio support'
-            'jack: for jack audio support'
             'libpulse: for pulse audio support')
 source=(http://downloads.sourceforge.net/sourceforge/${pkgname}/${pkgname}-${pkgver}.tar.bz2{,.sig})
 sha1sums=('c3193902b1cf923a625ed94360c91e28d84753d3'
@@ -20,8 +19,11 @@ validpgpkeys=('D021FF8ECF4BE09719D61A27231C4CBC60D5CAFE')
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr --enable-int-quality --with-module-suffix=.so \
-    --with-audio="alsa oss sdl jack pulse"
+  ./configure \
+    --prefix=/usr \
+    --enable-int-quality \
+    --with-module-suffix=.so \
+    --with-audio="alsa oss sdl pulse"
   make
 }
 

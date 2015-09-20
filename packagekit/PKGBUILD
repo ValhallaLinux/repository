@@ -13,21 +13,22 @@ sha256sums=('2b7d7af178431391f64a118a0d693106e9603b9db7bcf0f9cde5c5d62a0b60bf')
 
 build() {
   cd PackageKit-$pkgver
-  ./configure --prefix=/usr \
-              --sysconfdir=/etc \
-              --localstatedir=/var \
-              --libexecdir=/usr/lib/PackageKit \
-              --disable-static \
-              --disable-schemas-compile \
-              --disable-browser-plugin \
-              --enable-gtk-doc \
-              --enable-python3 \
-              --enable-systemd \
-              --enable-systemd-updates \
-              --enable-gstreamer-plugin \
-              --enable-alpm \
-              --disable-tests \
-              --disable-qt
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib/PackageKit \
+    --disable-static \
+    --disable-schemas-compile \
+    --disable-browser-plugin \
+    --enable-gtk-doc \
+    --enable-python3 \
+    --enable-systemd \
+    --enable-systemd-updates \
+    --enable-gstreamer-plugin \
+    --enable-alpm \
+    --disable-tests \
+    --disable-qt
   make
 }
 

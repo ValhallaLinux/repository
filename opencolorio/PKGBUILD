@@ -18,7 +18,8 @@ build()
   mv imageworks-OpenColorIO-* $pkgname-$pkgver
   cd $pkgname-$pkgver
    
-  cmake -DCMAKE_INSTALL_PREFIX=/usr .
+  cmake \
+    -DCMAKE_INSTALL_PREFIX=/usr .
   make 
 }
 

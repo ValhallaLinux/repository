@@ -22,7 +22,9 @@ build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   patch -Np1 -i ../most-debian.patch
   patch -Np1 -i ../most-leak-fd.patch
-  ./configure --prefix=/usr --sysconfdir=/etc
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc
   make
 }
 

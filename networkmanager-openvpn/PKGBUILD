@@ -17,7 +17,10 @@ sha256sums=('1643824bc7fdab42e1dab836bf81c328692295c86f146bde602eca093b394bb0')
 
 build() {
   cd NetworkManager-openvpn-${pkgver}
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
     --libexecdir=/usr/lib/networkmanager \
     --enable-more-warnings=yes \
     --disable-static

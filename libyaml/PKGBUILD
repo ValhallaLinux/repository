@@ -14,7 +14,8 @@ md5sums=('5fe00cda18ca5daeb43762b80c38e06e')
 
 build() {
   cd "$srcdir/yaml-$pkgver"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

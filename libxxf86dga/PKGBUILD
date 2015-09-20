@@ -17,7 +17,9 @@ sha256sums=('8eecd4b6c1df9a3704c04733c2f4fa93ef469b55028af5510b25818e2456c77e')
 
 build() {
   cd "${srcdir}/libXxf86dga-${pkgver}"
-  ./configure --prefix=/usr --disable-static
+  ./configure \
+    --prefix=/usr \
+    --disable-static
   make
 }
 

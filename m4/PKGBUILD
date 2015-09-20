@@ -19,7 +19,8 @@ validpgpkeys=('CFE2BE707B538E8B26757D84151308092983D606')   # Gary Vaughan
 
 build() {
   cd ${srcdir}/$pkgname-$pkgver  
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 
