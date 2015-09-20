@@ -37,7 +37,8 @@ prepare() {
 build() {
   export PYTHON_PATH='/usr/bin/python2'
   cd "$srcdir/$pkgname-$pkgver"
-  make prefix=/usr gitexecdir=/usr/lib/git-core \
+  make prefix=/usr \
+    gitexecdir=/usr/lib/git-core \
     CFLAGS="$CFLAGS" LDFLAGS="$LDFLAGS" \
     USE_LIBPCRE=1 \
     NO_CROSS_DIRECTORY_HARDLINKS=1 \

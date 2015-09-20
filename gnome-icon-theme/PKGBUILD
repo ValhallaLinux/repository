@@ -17,7 +17,8 @@ sha256sums=('359e720b9202d3aba8d477752c4cd11eced368182281d51ffd64c8572b4e503a')
 
 build() {
     cd "$pkgname-$pkgver"
-    ./configure --prefix=/usr
+    ./configure \
+      --prefix=/usr
     make
 }
 

@@ -22,7 +22,8 @@ build() {
   patch -p0 -i ../altivec.patch
   find . -type f -print0 | xargs -0 sed -i 's/\r//g'
   ./bootstrap
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

@@ -19,10 +19,14 @@ sha256sums=('db60a9408711b00f3780f5f5b657e9f44722c88c683ba6e9f2b4885631f429aa')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr \
-      --sysconfdir=/etc --localstatedir=/var \
-      --libexecdir=/usr/lib --disable-updater --disable-schemas-compile \
-      --enable-python
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib \
+    --disable-updater \
+    --disable-schemas-compile \
+    --enable-python
   make
 }
 

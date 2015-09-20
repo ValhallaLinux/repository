@@ -16,7 +16,9 @@ sha1sums=('38e17439d11be26207e4af0ff50973815694b26f')
 
 build() {
   cd ${pkgbase}-${pkgver}
-  ./configure --prefix=/usr --disable-sse
+  ./configure \
+    --prefix=/usr \
+    --disable-sse
   make
 }
 

@@ -18,8 +18,12 @@ md5sums=('c1970e4ec6f2af6591a75294fc6fb4fa')
 
 build() {
   cd geoclue-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-    --libexecdir=/usr/lib/$pkgname --disable-static
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib/$pkgname \
+    --disable-static
   make
 }
 

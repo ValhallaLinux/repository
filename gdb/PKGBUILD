@@ -29,7 +29,9 @@ build() {
   cd gdb-$pkgver
   
   # guile support has a severe bug https://sourceware.org/bugzilla/show_bug.cgi?id=17247
-  ./configure --prefix=/usr --disable-nls \
+  ./configure \
+    --prefix=/usr \
+    --disable-nls \
     --with-system-readline \
     --with-python=/usr/bin/python2 \
     --with-system-gdbinit=/etc/gdb/gdbinit

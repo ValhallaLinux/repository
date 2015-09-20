@@ -22,7 +22,8 @@ build() {
   # which is a secure version of locate.
   sed -i '/^SUBDIRS/s/locate//' Makefile.in
 
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

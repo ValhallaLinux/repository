@@ -16,8 +16,10 @@ sha256sums=('6fab1c1e0705fc2b0e4a63caf3ba1c5b64b4eaa1301e4cbc04bb934428b68450')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr \
-    --sysconfdir=/etc --localstatedir=/var
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var
 
   # https://bugzilla.gnome.org/show_bug.cgi?id=655517
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool

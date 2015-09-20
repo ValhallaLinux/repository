@@ -28,7 +28,10 @@ prepare() {
 build() {
   cd ${pkgname}-${pkgver}
   autoreconf -fi
-  ./configure --prefix=/usr --enable-cplusplus --disable-static
+  ./configure \
+    --prefix=/usr \
+    --enable-cplusplus \
+    --disable-static
   make
 }
 

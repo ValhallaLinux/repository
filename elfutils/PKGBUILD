@@ -33,7 +33,9 @@ build() {
   cd ${pkgname}-${pkgver}
 
   CFLAGS+=" -g"  # required for test-suite success
-  ./configure --prefix=/usr --program-prefix="eu-"
+  ./configure \
+    --prefix=/usr \
+    --program-prefix="eu-"
 
   make
 }

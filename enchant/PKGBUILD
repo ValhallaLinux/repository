@@ -16,7 +16,8 @@ md5sums=('de11011aff801dc61042828041fb59c7')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
     --disable-static \
     --disable-ispell \
     --with-myspell-dir=/usr/share/myspell

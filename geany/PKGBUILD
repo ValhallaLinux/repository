@@ -34,7 +34,8 @@ prepare() {
 build() {
   cd "$pkgname-$pkgver"
 
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 
   # Fix for FS#10318

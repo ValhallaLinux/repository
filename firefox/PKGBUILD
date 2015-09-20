@@ -36,7 +36,7 @@ validpgpkeys=('2B90598A745E992F315E22C58AB132963A06537A')
 # Note: These are for Arch Linux use ONLY. For your own distribution, please
 # get your own set of keys. Feel free to contact foutrelis@archlinux.org for
 # more information.
-_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
+#_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
 
 prepare() {
   cd mozilla-release
@@ -44,8 +44,8 @@ prepare() {
   cp ../mozconfig .mozconfig
   patch -Np1 -i ../firefox-install-dir.patch
 
-  echo -n "$_google_api_key" >google-api-key
-  echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
+  #echo -n "$_google_api_key" >google-api-key
+  #echo "ac_add_options --with-google-api-keyfile=\"$PWD/google-api-key\"" >>.mozconfig
 
   mkdir "$srcdir/path"
 

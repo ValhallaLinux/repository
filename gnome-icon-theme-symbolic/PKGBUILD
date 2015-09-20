@@ -17,7 +17,8 @@ sha256sums=('851a4c9d8e8cb0000c9e5e78259ab8b8e67c5334e4250ebcc8dfdaa33520068b')
 
 build() {
   cd "$pkgname-$pkgver"
-  GTK_UPDATE_ICON_CACHE=/bin/true ./configure --prefix=/usr
+  GTK_UPDATE_ICON_CACHE=/bin/true ./configure \
+    --prefix=/usr
   make
 }
 

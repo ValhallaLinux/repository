@@ -62,11 +62,12 @@ build() {
   ${srcdir}/${pkgname}-${pkgver}/configure --prefix=/usr \
       --libdir=/usr/lib --libexecdir=/usr/lib \
       --with-headers=/usr/include \
-      --with-bugurl=https://bugs.archlinux.org/ \
+      --with-bugurl=https://bugs.valhallalinux.com/ \
       --enable-add-ons \
       --enable-obsolete-rpc \
       --enable-kernel=2.6.32 \
-      --enable-bind-now --disable-profile \
+      --enable-bind-now \
+      --disable-profile \
       --enable-stackguard-randomization \
       --enable-lock-elision \
       --enable-multi-arch \

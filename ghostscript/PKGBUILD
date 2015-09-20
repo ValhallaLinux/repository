@@ -38,7 +38,8 @@ build() {
 
   autoconf --force
 
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
 	--enable-dynamic \
 	--with-ijs \
 	--with-jbig2dec \

@@ -40,7 +40,9 @@ prepare() {
 
 build() {
   cd "${srcdir}/freetype-${pkgver}"
-  ./configure --prefix=/usr --disable-static
+  ./configure \
+    --prefix=/usr \
+    --disable-static
   make
 }
 

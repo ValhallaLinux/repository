@@ -21,8 +21,12 @@ sha256sums=('bbc2fbc4692e30a2b12755bf79a4dce6288b5d419f81331d738a47da27b71519')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc --disable-schemas-compile \
-      --localstatedir=/var --libexecdir=/usr/lib/gnome-calculator
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --disable-schemas-compile \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib/gnome-calculator
   make
 }
 

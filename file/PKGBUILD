@@ -24,7 +24,9 @@ md5sums=('8fb13e5259fe447e02c4a37bc7225add')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --datadir=/usr/share/file
+  ./configure \
+    --prefix=/usr \
+    --datadir=/usr/share/file
   make
 }
 

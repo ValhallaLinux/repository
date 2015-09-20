@@ -21,7 +21,8 @@ build() {
 
   ./configure --build=${CHOST} \
     --prefix=/usr \
-    --enable-fat --enable-cxx
+    --enable-fat \
+    --enable-cxx
   make
 }
 

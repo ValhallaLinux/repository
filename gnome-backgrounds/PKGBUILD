@@ -15,8 +15,10 @@ sha256sums=('76e3f9dd01d8335da8e3e7c20f64c51d4e2372fa43a5280ce1649b32bebca03b')
 
 build() {
   cd "$pkgname-$pkgver"
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --localstatedir=/var
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var
   make
 }
 

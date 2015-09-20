@@ -17,7 +17,8 @@ sha256sums=('e5d9977493f8188baa6f432c5015c9937f0f67d29e0b6bccd3fae23126a47a15')
 build() {
   cd gdk-pixbuf-$pkgver
 
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
     --with-x11 \
     --with-libjasper \
     --with-included-loaders=png

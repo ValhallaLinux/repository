@@ -18,8 +18,11 @@ sha256sums=('7f6306344f305538ffda263b1085bdcb7039ec0551825dd503f6a3a18cb73061')
 build() {
   cd $pkgname-$pkgver
 
-  ./configure --prefix=/usr --disable-schemas-compile \
-    --disable-libsocialweb-backend --disable-fatal-warnings
+  ./configure \
+    --prefix=/usr \
+    --disable-schemas-compile \
+    --disable-libsocialweb-backend \
+    --disable-fatal-warnings
 
   # https://bugzilla.gnome.org/show_bug.cgi?id=655517
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool

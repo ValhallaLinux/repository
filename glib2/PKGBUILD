@@ -21,10 +21,12 @@ prepare() {
   
 build() {
   cd glib-$pkgver
-  PYTHON=/usr/bin/python2 ./configure --prefix=/usr --libdir=/usr/lib \
-      --sysconfdir=/etc \
-      --with-pcre=system \
-      --disable-fam
+  PYTHON=/usr/bin/python2 ./configure \
+    --prefix=/usr \
+    --libdir=/usr/lib \
+    --sysconfdir=/etc \
+    --with-pcre=system \
+    --disable-fam
   make
 }
 
