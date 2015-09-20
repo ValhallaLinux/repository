@@ -23,7 +23,8 @@ md5sums=('43bd6676f0b404326eee2d63be3cdcfe'
 validpgpkeys=('0048C8B026D4C96F0E589C2F6C859FB14B96A8C5')
 
 build() {
-	cd "$srcdir/$pkgname-$pkgver"
+	patch -p1 $srcdir/CVE-2014-9512.patch
+        cd "$srcdir/$pkgname-$pkgver"
 	./configure --prefix=/usr \
 		--with-included-popt=no \
 		--disable-debug
