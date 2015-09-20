@@ -21,16 +21,23 @@ validpgpkeys=('DA98F25C0871C49A59EAFF2C4DE8FF2A63C7CC90') # Simon McVittie <simo
 
 build() {
   cd dbus-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-      --libexecdir=/usr/lib/dbus-1.0 --with-dbus-user=dbus \
-      --with-system-pid-file=/run/dbus/pid \
-      --with-system-socket=/run/dbus/system_bus_socket \
-      --with-console-auth-dir=/run/console/ \
-      --enable-inotify --disable-dnotify \
-      --disable-verbose-mode --disable-static \
-      --disable-tests --disable-asserts \
-      --with-systemdsystemunitdir=/usr/lib/systemd/system \
-      --enable-systemd
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib/dbus-1.0 \
+    --with-dbus-user=dbus \
+    --with-system-pid-file=/run/dbus/pid \
+    --with-system-socket=/run/dbus/system_bus_socket \
+    --with-console-auth-dir=/run/console/ \
+    --enable-inotify \
+    --disable-dnotify \
+    --disable-verbose-mode \
+    --disable-static \
+    --disable-tests \
+    --disable-asserts \
+    --with-systemdsystemunitdir=/usr/lib/systemd/system \
+    --enable-systemd
   make
 }
 

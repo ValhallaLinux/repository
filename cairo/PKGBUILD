@@ -33,7 +33,7 @@ build() {
 	--enable-ps \
 	--enable-pdf \
 	--enable-gobject \
-        --enable-gtk-doc
+    --enable-gtk-doc
 	
 	#--disable-xlib-xcb \
 	#--enable-test-surfaces \ takes ages

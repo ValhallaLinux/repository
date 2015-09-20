@@ -14,7 +14,9 @@ sha256sums=('19221eed65a1e1498d396f3f99a783a95b21b4385e63b57a1f16e8728b8ca118')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc \
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
     --libexecdir=/usr/lib/cups-pk-helper
   make
 }

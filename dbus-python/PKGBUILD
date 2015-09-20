@@ -22,11 +22,13 @@ prepare() {
 
 build() {
   cd build-python2
-  PYTHON=python2 ../${pkgbase}-${pkgver}/configure --prefix=/usr
+  PYTHON=python2 ../${pkgbase}-${pkgver}/configure \
+    --prefix=/usr
   make
 
   cd ../build-python3
-  ../${pkgbase}-${pkgver}/configure --prefix=/usr
+  ../${pkgbase}-${pkgver}/configure \
+    --prefix=/usr
   make
 }
 

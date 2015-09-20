@@ -16,7 +16,8 @@ md5sums=('67e7b5e45db57a6f1f0a6962f5ecb190')
 
 build() {
   cd "$srcdir/celt-$pkgver"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

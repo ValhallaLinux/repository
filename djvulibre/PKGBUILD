@@ -24,7 +24,9 @@ install=install
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	./autogen.sh
-	./configure --prefix=/usr --disable-desktopfiles
+	./configure \
+	  --prefix=/usr \
+	  --disable-desktopfiles
 	make
 }
 

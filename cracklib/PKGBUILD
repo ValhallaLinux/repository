@@ -15,7 +15,10 @@ md5sums=('b31f7e3618cda7a2ac38588067275013')
 
 build() {
   cd $srcdir/$pkgname-$pkgver
-  ./configure --prefix=/usr --sbindir=/usr/bin --without-python
+  ./configure \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
+    --without-python
   make 
 }
 

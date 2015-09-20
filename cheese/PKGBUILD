@@ -20,8 +20,13 @@ sha256sums=('44622f6ad6d8703b22c6d40219ae317959495ccc9994b563b324592933ff90a0')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-      --disable-static --disable-schemas-compile --libexecdir=/usr/lib/cheese
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --disable-schemas-compile \
+    --libexecdir=/usr/lib/cheese
 
   # https://bugzilla.gnome.org/show_bug.cgi?id=655517
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool

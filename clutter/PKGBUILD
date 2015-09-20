@@ -17,7 +17,8 @@ sha256sums=('8e69d21d9f7e8e89eafc072e2615c289903260c470af39bcb578b081139c11ac')
 
 build() {
   cd "$pkgname-$pkgver"
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
     --enable-introspection \
     --enable-egl-backend \
     --enable-gdk-backend \

@@ -15,7 +15,8 @@ sha256sums=('883550b574a036363239442edceb61cf3f6bedc8adc97d3404278556dc82234d')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   # https://bugzilla.gnome.org/show_bug.cgi?id=655517
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
   make

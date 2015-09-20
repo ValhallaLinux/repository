@@ -18,7 +18,8 @@ build() {
 	cd "${srcdir}/${pkgname}-${_realver}"
 	sed -i 's|/usr/local/lib/cs|/usr/lib/cs|' contrib/ocs
 
-	./configure --prefix=/usr
+	./configure \
+	  --prefix=/usr
 	make
 }
 

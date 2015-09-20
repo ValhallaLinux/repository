@@ -15,7 +15,8 @@ sha256sums=('843532672692f98e9b2d6ae6cc8658da562dfde1606c7f33d9d227a344de56c5')
 
 build() {
   cd "${srcdir}/desktop-file-utils-${pkgver}"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

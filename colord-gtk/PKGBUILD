@@ -19,9 +19,13 @@ validpgpkeys=('163EB50119225DB3DF8F49EA17ACBA8DFA970E17')
 build() {
   cd "$pkgname-$pkgver"
   
-  ./configure --prefix=/usr \
-    --sysconfdir=/etc --libexecdir=/usr/lib/colord \
-    --localstatedir=/var --disable-static --enable-vala
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --libexecdir=/usr/lib/colord \
+    --localstatedir=/var \
+    --disable-static \
+    --enable-vala
   make
 }
 

@@ -24,7 +24,8 @@ md5sums=('55d169739f72aa5af40cfd7c3fbfcffd')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr  \
+  ./configure \
+    --prefix=/usr  \
     --sysconfdir=/etc \
     --sbindir=/usr/bin \
     --localstatedir=/var \

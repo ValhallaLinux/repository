@@ -76,7 +76,8 @@ build() {
      --with-cups-group=lp \
      --enable-pam=yes \
      --enable-raw-printing \
-     --enable-dbus --with-dbusdir=/etc/dbus-1 \
+     --enable-dbus \
+     --with-dbusdir=/etc/dbus-1 \
      --enable-ssl=yes \
      --enable-threads \
      --enable-avahi\

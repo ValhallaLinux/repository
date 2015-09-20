@@ -15,7 +15,9 @@ sha256sums=('15bf87555321556750bc68ace360f3df420359a8ab257e15c44fb69710152f1c')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --with-configdir=/etc/fonts/conf.avail
+  ./configure \
+    --prefix=/usr \
+    --with-configdir=/etc/fonts/conf.avail
   make
 }
 

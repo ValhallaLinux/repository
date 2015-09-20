@@ -24,7 +24,14 @@ build() {
 	elif [[ "${CARCH}" == i686 ]];then
 		EXTRA_OPTIONS="--enable-mode=32"
 	fi
-	./configure --prefix=/usr --sysconfdir=/etc --disable-dar-static --disable-static --disable-upx --disable-build-html ${EXTRA_OPTIONS}
+	./configure \
+	  --prefix=/usr \
+	  --sysconfdir=/etc \
+	  --disable-dar-static \
+	  --disable-static \
+	  --disable-upx -\
+	  -disable-build-html \
+	  ${EXTRA_OPTIONS}
 	make
 }
 

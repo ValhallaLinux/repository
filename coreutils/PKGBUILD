@@ -33,10 +33,10 @@ prepare() {
 build() {
   cd $pkgname-$pkgver
   ./configure \
-      --prefix=/usr \
-      --libexecdir=/usr/lib \
-      --with-openssl \
-      --enable-no-install-program=groups,hostname,kill,uptime
+    --prefix=/usr \
+    --libexecdir=/usr/lib \
+    --with-openssl \
+    --enable-no-install-program=groups,hostname,kill,uptime
   make
 }
 
