@@ -17,10 +17,11 @@ md5sums=('d4b78e6a0794a9d386ece5cd08eb2d3e')
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
 
-  ./configure --prefix=/usr \
-              --enable-enca \
-              --enable-harfbuzz \
-              --enable-fontconfig
+  ./configure \
+    --prefix=/usr \
+    --enable-enca \
+    --enable-harfbuzz \
+    --enable-fontconfig
   make
 }
 

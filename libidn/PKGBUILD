@@ -17,7 +17,8 @@ sha1sums=('557e1e37f0978e975b21bcdc243c198cb708bb75')
 
 build() {
   cd ${srcdir}/${pkgname}-${pkgver}
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

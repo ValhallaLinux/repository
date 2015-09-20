@@ -24,7 +24,10 @@ prepare() {
 
 build() {
   cd $pkgname-$pkgver
-  PYTHON=/usr/bin/python2 ./configure --sysconfdir=/etc --prefix=/usr --localstatedir=/var
+  PYTHON=/usr/bin/python2 ./configure \
+    --sysconfdir=/etc \
+    --prefix=/usr \
+    --localstatedir=/var
   make
 }
 

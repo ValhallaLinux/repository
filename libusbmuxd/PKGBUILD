@@ -17,7 +17,8 @@ md5sums=('e5351ff6f6eedcb50701e02d91cc480c')
 
 build() {
   cd libusbmuxd-${pkgver}
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

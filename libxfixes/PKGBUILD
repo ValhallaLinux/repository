@@ -16,7 +16,10 @@ sha256sums=('63bec085084fa3caaee5180490dd871f1eb2020ba9e9b39a30f93693ffc34767')
 
 build() {
   cd "${srcdir}/libXfixes-${pkgver}"
-  ./configure --prefix=/usr --sysconfdir=/etc --disable-static
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --disable-static
   make
 }
 

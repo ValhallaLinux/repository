@@ -18,7 +18,9 @@ md5sums=('1f553d6ce1ad255bc83b3d8e9384f515')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
-  ./configure --prefix=/usr --disable-lynx
+  ./configure \
+    --prefix=/usr \
+    --disable-lynx
   make
 }
 

@@ -21,7 +21,10 @@ md5sums=('9a40d29a2d84b41f9f36d7dd90b4f950'
 build() {
   patch -p1 $pkgfiles/CVE-2014-9488.patch
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc --with-regex=pcre
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --with-regex=pcre
   make
 }
 

@@ -24,7 +24,11 @@ prepare() {
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr --disable-vcd-info --enable-cpp-progs --disable-static
+  ./configure \
+    --prefix=/usr \
+    --disable-vcd-info \
+    --enable-cpp-progs \
+    --disable-static
   make
 }
 

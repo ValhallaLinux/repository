@@ -21,10 +21,11 @@ prepare() {
 
 build() {
     cd "$pkgname-$pkgver"
-    PYTHON=python2 ./configure --prefix=/usr \
-        --sysconfdir=/etc \
-        --localstatedir=/var \
-        --with-python-rev=2.7
+    PYTHON=python2 ./configure \
+      --prefix=/usr \
+      --sysconfdir=/etc \
+      --localstatedir=/var \
+      --with-python-rev=2.7
     make
 }
 

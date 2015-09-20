@@ -16,8 +16,12 @@ sha256sums=('82dd38e0c1f497704bf3b43682fca2768886058f004b14e9b5d103596f8c6e6b')
 
 build() {
   cd "$pkgname-$pkgver"
-  PYTHON=/usr/bin/python2 ./configure --prefix=/usr --sysconfdir=/etc \
-      --localstatedir=/var --disable-static --enable-introspection
+  PYTHON=/usr/bin/python2 ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --enable-introspection
   make
 }
 

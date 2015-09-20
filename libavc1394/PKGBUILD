@@ -15,7 +15,10 @@ md5sums=('caf0db059d8b8d35d6f08e6c0e1c7dfe')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
-  ./configure --prefix=/usr --mandir=/usr/share/man --disable-static
+  ./configure \
+    --prefix=/usr \
+    --mandir=/usr/share/man \
+    --disable-static
   make
 }
 

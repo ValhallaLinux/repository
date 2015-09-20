@@ -15,7 +15,10 @@ sha256sums=('756edc7c383254eef8b4e1b733c3bf1dc061b523c9f9833ac7058378b8349d0b')
 
 build() {
   cd "${srcdir}/libXmu-${pkgver}"
-  ./configure --prefix=/usr --sysconfdir=/etc --disable-static
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --disable-static
   make
 }
 

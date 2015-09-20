@@ -22,7 +22,8 @@ build() {
 	# fix some libtools errors
 	#autoreconf -vfi
 	
-	./configure --prefix=/usr
+	./configure \
+	  --prefix=/usr
 	make
 }
 

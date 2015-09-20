@@ -15,7 +15,11 @@ sha256sums=('94668adb29d4dc3115b0fd105942ebd5ca6f5f9dbb2afa8a191a73a747dd506f')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --disable-static --enable-gdkpixbuf --disable-qt
+  ./configure \
+    --prefix=/usr \
+    --disable-static \
+    --enable-gdkpixbuf \
+    --disable-qt
   make
 }
 

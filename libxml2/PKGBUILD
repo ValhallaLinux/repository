@@ -32,7 +32,11 @@ prepare() {
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr --with-threads --with-history --with-python=/usr/bin/python2
+  ./configure \
+    --prefix=/usr \
+    --with-threads \
+    --with-history \
+    --with-python=/usr/bin/python2
   make
 }
 

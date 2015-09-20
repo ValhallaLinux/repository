@@ -25,9 +25,11 @@ prepare() {
 build() {
   cd $pkgname-$pkgver
   autoreconf -fi
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --localstatedir=/var --disable-static \
-      --disable-dbus
+  ./configure \
+    --prefix=/usr --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --disable-dbus
   make
 }
 

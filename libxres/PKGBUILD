@@ -16,7 +16,10 @@ sha256sums=('26899054aa87f81b17becc68e8645b240f140464cf90c42616ebb263ec5fa0e5')
 
 build() {
   cd "${srcdir}/libXres-${pkgver}"
-  ./configure --prefix=/usr --sysconfdir=/etc --disable-static
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --disable-static
   make
 }
 

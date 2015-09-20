@@ -23,13 +23,14 @@ prepare() {
 build() {
   cd "$srcdir/$pkgname-$pkgver"
 
-  ./configure --prefix=/usr \
-     --enable-swap-16bit-csp \
-     --enable-experimental \
-     --enable-libwebpmux \
-     --enable-libwebpdemux \
-     --enable-libwebpdecoder \
-     --disable-static
+  ./configure \
+    --prefix=/usr \
+    --enable-swap-16bit-csp \
+    --enable-experimental \
+    --enable-libwebpmux \
+    --enable-libwebpdemux \
+    --enable-libwebpdecoder \
+    --disable-static
   make
 }
 

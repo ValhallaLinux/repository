@@ -23,7 +23,9 @@ prepare() {
 
 build() {
   cd $pkgbase-$pkgver
-  ./configure --prefix=/usr --disable-static
+  ./configure \
+    --prefix=/usr \
+    --disable-static
   make
 }
 

@@ -16,9 +16,12 @@ sha256sums=('463bcbe5737b1b93f3345ee34abf601e8eb864f507c49ff1921c2737abafc1e5')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --localstatedir=/var --disable-static \
-      --with-libgtop-smp
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-static \
+    --with-libgtop-smp
   make
 }
 

@@ -20,7 +20,8 @@ prepare() {
 
 build() {
   cd tiff-${pkgver}
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

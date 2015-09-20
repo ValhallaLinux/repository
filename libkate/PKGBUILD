@@ -24,9 +24,10 @@ build() {
   export PYTHON="/usr/bin/python2"
   sed "1s/python$/python2/" -i tools/KateDJ/KateDJ
 
-  ./configure --prefix=/usr \
-              --disable-static \
-              --disable-doc
+  ./configure \
+    --prefix=/usr \
+    --disable-static \
+    --disable-doc
   make
 }
 

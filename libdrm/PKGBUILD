@@ -31,7 +31,9 @@ prepare() {
 }
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --enable-udev
+  ./configure \
+    --prefix=/usr \
+    --enable-udev
   make
 }
 

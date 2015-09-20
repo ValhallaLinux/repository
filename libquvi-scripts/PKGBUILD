@@ -16,7 +16,10 @@ validpgpkeys=('E220FCFF9EADBA326FD6B23BBF1D59CCAD00BE50')
 
 build() {
   cd "${pkgname}-${pkgver}"
-  ./configure --prefix=/usr --with-nsfw --with-geoblocked
+  ./configure \
+    --prefix=/usr \
+    --with-nsfw \
+    --with-geoblocked
   make
 }
 

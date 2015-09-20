@@ -17,7 +17,8 @@ md5sums=('8757900ba7bbe2ef5f54342415d0223e')
 
 build() {
   cd "$pkgname-$pkgver"
-  PYTHON=/usr/bin/python2 ./configure --prefix=/usr
+  PYTHON=/usr/bin/python2 ./configure \
+    --prefix=/usr
   make
 }
 

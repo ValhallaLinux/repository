@@ -15,7 +15,10 @@ sha256sums=('c5bdafa51d1ae30086fac01ab83be8d47fe117b238d3437f8e965434090e041c')
 
 build() {
   cd "${srcdir}/libXpm-${pkgver}"
-  ./configure --prefix=/usr --sysconfdir=/etc --disable-static
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --disable-static
   make
 }
 

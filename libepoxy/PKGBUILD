@@ -17,7 +17,8 @@ md5sums=('12d6b7621f086c0c928887c27d90bc30')
 build() {
   cd "${pkgname}-${pkgver}"
 
-  ./autogen.sh --prefix=/usr
+  ./autogen.sh \
+    --prefix=/usr
 }
 
 check() {

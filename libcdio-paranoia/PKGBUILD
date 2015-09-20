@@ -16,7 +16,11 @@ md5sums=('0255aa50e660db7f2c39658b9c565814'
 
 build() {
   cd "${pkgname}-${pkgver}"
-  ./configure --prefix=/usr --enable-cpp-progs --disable-static --disable-example-progs
+  ./configure \
+    --prefix=/usr \
+    --enable-cpp-progs \
+    --disable-static \
+    --disable-example-progs
   make
 }
 

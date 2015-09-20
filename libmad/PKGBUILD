@@ -31,7 +31,8 @@ build() {
   cd ${pkgname}-${pkgver}
   CFLAGS="$CFLAGS -ftree-vectorize -ftree-vectorizer-verbose=1"
   autoconf
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

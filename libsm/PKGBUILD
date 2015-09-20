@@ -15,7 +15,9 @@ sha256sums=('0baca8c9f5d934450a70896c4ad38d06475521255ca63b717a6510fdb6e287bd')
 
 build() {
   cd libSM-${pkgver}
-  ./configure --prefix=/usr --sysconfdir=/etc
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc
   make
 }
 

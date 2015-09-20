@@ -19,7 +19,10 @@ sha1sums=('9a4ebc2a946a75379634f4ca53fb57249cdb008a')
 build() {
   cd $pkgname-$_tag
   ./autogen.sh
-  ./configure --prefix=/usr --disable-static --enable-shared
+  ./configure \
+    --prefix=/usr \
+    --disable-static \
+    --enable-shared
   make
 }
 

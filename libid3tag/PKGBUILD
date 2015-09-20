@@ -26,7 +26,8 @@ build() {
   patch -p1 -i ${srcdir}/11_unknown_encoding.diff
   patch -Np0 -i ${srcdir}/CVE-2008-2109.patch
 
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

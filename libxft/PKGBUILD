@@ -16,7 +16,10 @@ sha256sums=('f5a3c824761df351ca91827ac221090943ef28b248573486050de89f4bfcdc4c')
 
 build() {
   cd "${srcdir}/libXft-${pkgver}"
-  ./configure --prefix=/usr --sysconfdir=/etc --disable-static
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --disable-static
   make
 }
 

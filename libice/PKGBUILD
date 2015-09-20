@@ -17,7 +17,9 @@ sha256sums=('8f7032f2c1c64352b5423f6b48a8ebdc339cc63064af34d66a6c9aa79759e202')
 
 build() {
   cd libICE-${pkgver}
-  ./configure --prefix=/usr --sysconfdir=/etc
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc
   make
 }
 

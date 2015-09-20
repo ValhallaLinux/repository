@@ -15,7 +15,8 @@ source=(http://downloads.xiph.org/releases/ogg/$pkgname-$pkgver.tar.xz
 
 build() {
   cd "$srcdir/${pkgname}-${pkgver}"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

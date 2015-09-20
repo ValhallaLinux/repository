@@ -16,7 +16,8 @@ source=("http://mp4v2.googlecode.com/files/mp4v2-${pkgver}.tar.bz2")
 build() {
   cd ${srcdir}/mp4v2-${pkgver}
 
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

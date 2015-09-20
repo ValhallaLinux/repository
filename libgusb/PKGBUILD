@@ -15,7 +15,9 @@ sha256sums=('437966fb45e30b8e757b2c200daf5d4e7dd22bf5aa80e151e3b1807270d38083')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --disable-static
+  ./configure \
+    --prefix=/usr \
+    --disable-static
   make
 }
 

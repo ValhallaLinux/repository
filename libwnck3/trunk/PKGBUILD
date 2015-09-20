@@ -16,8 +16,11 @@ sha256sums=('f5080076346609b4c36394b879f3a86b92ced3b90a37cb54c8e9a14f00e7921c')
 
 build() {
     cd "$_pkgbasename-$pkgver"
-    ./configure --prefix=/usr --sysconfdir=/etc \
-        --localstatedir=/var --disable-static
+    ./configure \
+      --prefix=/usr \
+      --sysconfdir=/etc \
+      --localstatedir=/var \
+      --disable-static
     make
 }
 

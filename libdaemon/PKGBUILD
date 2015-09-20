@@ -18,7 +18,10 @@ sha1sums=('SKIP')
 build() {
 	cd "${srcdir}/${pkgname}"
 	./bootstrap.sh
-	./configure --prefix=/usr --localstatedir=/var --disable-lynx
+	./configure \
+	  --prefix=/usr \
+	  --localstatedir=/var \
+	  --disable-lynx
 	make
 }
 

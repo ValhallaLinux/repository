@@ -44,7 +44,9 @@ prepare() {
 
 build() {
   cd "$pkgname-$pkgver"
-  ./configure --prefix=/usr --without-xml2
+  ./configure \
+    --prefix=/usr \
+    --without-xml2
   make
 }
 

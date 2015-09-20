@@ -18,7 +18,10 @@ sha512sums=('25a72747e8a81d1afddad007599f188ee7435240e17f431f28f4fe2b6f4c777c9a9
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   autoreconf -vfi
-  ./configure --prefix=/usr --enable-introspection --with-gtk=3
+  ./configure \
+    --prefix=/usr \
+    --enable-introspection \
+    --with-gtk=3
   make
 }
 

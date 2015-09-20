@@ -18,7 +18,8 @@ md5sums=('d6d34cd725a0100a5e476e711838e1b1')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

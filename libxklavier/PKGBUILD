@@ -17,8 +17,12 @@ sha256sums=('d5d2c135e3227142f5b455b9ffdf3e05be4b1e85a6c2882f8e905cc30c362d3e')
 
 build() {
   cd "$pkgname-$pkgver"
-  ./autogen.sh --prefix=/usr --with-xkb-bin-base=/usr/bin \
-      --with-xkb-base=/usr/share/X11/xkb --disable-static --enable-gtk-doc
+  ./autogen.sh \
+    --prefix=/usr \
+    --with-xkb-bin-base=/usr/bin \
+    --with-xkb-base=/usr/share/X11/xkb \
+    --disable-static \
+    --enable-gtk-doc
   make
 }
 

@@ -18,7 +18,9 @@ validpgpkeys=('B35BF85BF19489D04E28C33C21194EBB165733EA')
 
 build() {
   cd ${pkgname}-${pkgver}-stable
-  ./configure --prefix=/usr --sysconfdir=/etc
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc
   make
 }
 

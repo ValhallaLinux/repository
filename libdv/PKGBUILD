@@ -15,7 +15,9 @@ md5sums=('f895162161cfa4bb4a94c070a7caa6c7')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
-  ./configure --prefix=/usr --disable-gtk
+  ./configure \
+    --prefix=/usr \
+    --disable-gtk
   make
 }
 

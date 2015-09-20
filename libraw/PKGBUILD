@@ -18,7 +18,8 @@ sha256sums=('a1b95b6c2379e46bf09321d3281185474ea47d1e4585f3c5a4f36e0fbcbbe8bc')
 
 build() {
   cd LibRaw-${pkgver}
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
     --disable-examples
   make
 }
