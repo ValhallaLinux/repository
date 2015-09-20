@@ -12,14 +12,6 @@ license=('LGPL')
 arch=('i686' 'x86_64')
 options=('!emptydirs')
 depends=('expat' 'libdaemon' 'glib2' 'libcap' 'gdbm' 'dbus')
-optdepends=('gtk3: avahi-discover-standalone, bshell, bssh, bvnc'
-            'gtk2: gtk2 bindings'
-            'qt4: qt4 bindings'
-            'pygtk: avahi-bookmarks, avahi-discover'
-            'python2-twisted: avahi-bookmarks'
-            'mono: mono bindings'
-            'python2-dbus: avahi-discover'
-            'nss-mdns: NSS support for mDNS')
 makedepends=('git' 'qt4' 'pygtk' 'mono' 'intltool' 'python2-dbus'
              'gtk-sharp-2' 'gobject-introspection' 'gtk3' 'xmltoman')
 backup=('etc/avahi/hosts'
@@ -58,9 +50,14 @@ build() {
 		--sbindir=/usr/bin \
 		--disable-monodoc \
 		--disable-qt3 \
+		--disable-qt4 \
+		--disable-gtk3 \
+		--disable-gtk \
+		--disable-mono \
+		--disable-monodoc \
 		--enable-compat-libdns_sd \
 		--enable-compat-howl \
-		--with-distro=archlinux \
+		--with-distro=valhallalinux \
 		--with-avahi-priv-access-group=network \
 		--with-autoipd-user=avahi \
 		--with-autoipd-group=avahi \

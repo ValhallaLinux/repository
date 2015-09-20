@@ -14,14 +14,7 @@ pkgdesc='Text document format for short documents, articles, books and UNIX man 
 arch=('any')
 url='http://www.methods.co.nz/asciidoc/'
 license=('GPL')
-depends=('python2' 'libxslt' 'docbook-xsl')
-optdepends=('lilypond: music-filter'
-            'imagemagick: music-filter (used in conjunction with lilypond)'
-            'source-highlight: source-highlight-filter'
-            'dblatex: pdf generation'
-            'fop: alternative pdf generation'
-            'lynx: text generation'
-            'w3m: text generation (alternative to lynx)')
+depends=('python2' 'libxml2' 'libxslt' 'docbook-xsl')
 source=("http://downloads.sourceforge.net/${pkgname}/${pkgname}-${pkgver}.tar.gz")
 md5sums=('c59018f105be8d022714b826b0be130a')
 

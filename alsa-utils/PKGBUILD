@@ -17,7 +17,10 @@ source=(ftp://ftp.alsa-project.org/pub/utils/$pkgname-${pkgver}.tar.bz2
 
 build() {
   cd ${srcdir}/${pkgname}-${pkgver}
-  ./configure --prefix=/usr --disable-alsaconf --sbindir=/usr/bin \
+  ./configure \
+    --prefix=/usr \
+    --disable-alsaconf \
+    --sbindir=/usr/bin \
     --with-udev-rules-dir=/usr/lib/udev/rules.d \
     --with-systemdsystemunitdir=/usr/lib/systemd/system
   make

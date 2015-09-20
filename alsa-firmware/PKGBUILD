@@ -14,7 +14,9 @@ options=(!strip)
 
 build() {
   cd $srcdir/$pkgname-$pkgver
-  ./configure --prefix=/usr --with-hotplug-dir=/usr/lib/firmware
+  ./configure \
+    --prefix=/usr \
+    --with-hotplug-dir=/usr/lib/firmware
   make
 }
 

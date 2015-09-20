@@ -20,7 +20,10 @@ build() {
   cd "$pkgname-$pkgver"
 
   export INSTALL_USER=root INSTALL_GROUP=root
-  ./configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib
+  ./configure \
+    --prefix=/usr \
+    --libdir=/usr/lib \
+    --libexecdir=/usr/lib
   make
 }
 

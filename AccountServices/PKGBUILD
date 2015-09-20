@@ -15,10 +15,14 @@ md5sums=('8b21fe2fbb2b0cf1ba8329596898b203')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc \
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
     --libexecdir=/usr/lib/accountsservice \
     --with-systemdsystemunitdir=/usr/lib/systemd/system \
-    --localstatedir=/var --disable-static --enable-systemd
+    --localstatedir=/var \
+    --disable-static \
+    --enable-systemd
   make
 }
 
