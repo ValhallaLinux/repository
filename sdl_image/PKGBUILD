@@ -16,7 +16,9 @@ md5sums=('a0f9098ebe5400f0bdc9b62e60797ecb')
 
 build() {
   cd SDL_image-$pkgver
-  ./configure --prefix=/usr --disable-static
+  ./configure \
+    --prefix=/usr \
+    --disable-static
   make
 }
 

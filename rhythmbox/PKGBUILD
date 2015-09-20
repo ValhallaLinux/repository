@@ -32,10 +32,15 @@ prepare() {
 
 build() {
   cd "$pkgname-$pkgver"
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --libexecdir=/usr/lib/rhythmbox \
-      --localstatedir=/var --disable-static \
-      --enable-daap --enable-python --enable-vala
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --libexecdir=/usr/lib/rhythmbox \
+    --localstatedir=/var \
+    --disable-static \
+    --enable-daap \
+    --enable-python \
+    --enable-vala
   make
 }
 

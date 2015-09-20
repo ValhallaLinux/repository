@@ -57,8 +57,13 @@ prepare() {
 
 build() {
   cd SDL-$pkgver
-  ./configure --prefix=/usr --disable-nasm --enable-alsa \
-              --with-x --disable-rpath --disable-static
+  ./configure \
+    --prefix=/usr \
+    --disable-nasm \
+    --enable-alsa \
+    --with-x \
+    --disable-rpath \
+    --disable-static
   make
 }
 
