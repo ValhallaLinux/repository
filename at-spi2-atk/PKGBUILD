@@ -19,7 +19,9 @@ build() {
   sed -i -e '/AC_PATH_XTRA/d' configure.ac
   autoreconf --force --install
 
-  ./configure --prefix=/usr --sysconfdir=/etc \
+  ./configure --prefix=/usr \
+    --sysconfdir=/etc \
+    --disable-static \
     --disable-schemas-compile
   make
 }

@@ -32,14 +32,14 @@ prepare() {
 build() {
   cd ${pkgname}-${pkgver}
   ./configure \
-          --prefix=/usr \
-          --mandir=/usr/share/man \
-          --sysconfdir=/etc \
-          --localstatedir=/var \
-          --libexecdir=/usr/lib \
-          --enable-sixaxis \
-          --enable-experimental \
-          --enable-library # this is deprecated
+    --prefix=/usr \
+    --mandir=/usr/share/man \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib \
+    --enable-sixaxis \
+    --enable-experimental \
+    --enable-library # this is deprecated
   make
 }
 
