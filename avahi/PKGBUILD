@@ -12,8 +12,8 @@ license=('LGPL')
 arch=('i686' 'x86_64')
 options=('!emptydirs')
 depends=('expat' 'libdaemon' 'glib2' 'libcap' 'gdbm' 'dbus')
-makedepends=('git' 'qt4' 'pygtk' 'mono' 'intltool' 'python2-dbus'
-             'gtk-sharp-2' 'gobject-introspection' 'gtk3' 'xmltoman')
+makedepends=('git' 'intltool' 'python2-dbus'
+             'gobject-introspection''xmltoman')
 backup=('etc/avahi/hosts'
         'etc/avahi/avahi-daemon.conf'
         'etc/avahi/services/ssh.service'

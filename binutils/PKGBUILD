@@ -41,12 +41,18 @@ prepare() {
 build() {
   cd ${srcdir}/binutils-build
 
-  ${srcdir}/binutils-gdb/configure --prefix=/usr \
+  ${srcdir}/binutils-gdb/configure \
+    --prefix=/usr \
     --with-lib-path=/usr/lib:/usr/local/lib \
     --with-bugurl=https://github.com/ValhallaLinux/repository/issues \
-    --enable-threads --enable-shared --with-pic \
-    --enable-ld=default --enable-gold --enable-plugins \
-    --disable-werror --disable-gdb
+    --enable-threads \
+    --enable-shared \
+    --with-pic \
+    --enable-ld=default \
+    --enable-gold \
+    --enable-plugins \
+    --disable-werror \
+    --disable-gdb
 
   # check the host environment and makes sure all the necessary tools are available
   make configure-host

@@ -54,8 +54,12 @@ build() {
                -DSYS_BASH_LOGOUT=\'\"/etc/bash.bash_logout\"\')
   export CFLAGS="${CFLAGS} ${_bashconfig[@]}"
 
-  ./configure --prefix=/usr --with-curses --enable-readline \
-    --without-bash-malloc --with-installed-readline
+  ./configure \
+    --prefix=/usr \
+    --with-curses \
+    --enable-readline \
+    --without-bash-malloc \
+    --with-installed-readline
   make
 }
 
