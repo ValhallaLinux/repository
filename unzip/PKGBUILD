@@ -14,7 +14,7 @@ license=('custom')
 depends=('bzip2' 'bash')
 source=("http://downloads.sourceforge.net/infozip/${pkgname}${_pkgver}.tar.gz"
         'overflow-fsize.patch'
-        'cve20149636.patch'
+        'CVE-2014-9636.patch'
         'test_compr_eb.patch'
         'getZip64Data.patch'
         'crc32.patch')
@@ -29,7 +29,7 @@ prepare() {
 	cd "${srcdir}/${pkgname}${_pkgver}"
 	sed -i "/MANDIR =/s#)/#)/share/#" unix/Makefile
 	patch -p1 -i ../overflow-fsize.patch #FS#44171
-	patch -p1 -i ../cve20149636.patch #FS#44171
+	patch -p1 -i ../CVE-2014-9636.patch #FS#44171
 	patch -i ../test_compr_eb.patch # FS#43391
 	patch -i ../getZip64Data.patch # FS#43300
 	patch -i ../crc32.patch # FS#43300
