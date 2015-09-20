@@ -36,9 +36,9 @@ build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
 
   WX_CONFIG=/usr/bin/wx-config ./configure --prefix=/usr \
-              --libexecdir=/usr/bin \
-              --with-gihdir=/usr/share/gnuplot \
-              --with-readline=gnu --enable-qt
+    --libexecdir=/usr/bin \
+    --with-gihdir=/usr/share/gnuplot \
+    --with-readline=gnu --enable-qt
   make pkglibexecdir=/usr/bin
 }
 

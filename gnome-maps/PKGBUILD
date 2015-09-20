@@ -17,7 +17,9 @@ sha256sums=('a7d791e4fb2dc3674232edf5c6d6112274869524db458695fc9fece49df07c96')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --disable-schemas-compile
+  ./configure \
+    --prefix=/usr \
+    --disable-schemas-compile
   make
 }
 

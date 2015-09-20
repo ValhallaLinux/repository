@@ -19,8 +19,12 @@ sha256sums=('00936e8b5d29fc01cd6daf6c119242877d81b2dcca33fb0ee9ce4adec8675391')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-    --libexecdir=/usr/lib/$pkgname --enable-systemd
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib/$pkgname \
+    --enable-systemd
   make
 }
 

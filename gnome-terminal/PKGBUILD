@@ -20,8 +20,13 @@ sha256sums=('9df7bab7bfd15ca9a3c60612e425baaf5c8b32ba181619f740b7129a0768f4e0')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-    --libexecdir=/usr/lib/$pkgname --disable-static --with-nautilus-extension
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib/$pkgname \
+    --disable-static \
+    --with-nautilus-extension
   make
 }
 

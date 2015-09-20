@@ -18,7 +18,10 @@ sha256sums=('88cd3d2df1f0419066a7f01f28ee4fc8f8c4b361dbf44a93067166c8a796a741')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --libexecdir=/usr/lib/gnome-session --enable-extensions=all
+  ./configure \
+    --prefix=/usr \
+    --libexecdir=/usr/lib/gnome-session \
+    --enable-extensions=all
   make
 }
 

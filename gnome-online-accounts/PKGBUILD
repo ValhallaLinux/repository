@@ -16,11 +16,21 @@ sha256sums=('a50f2f0f54f85418c8274580a53fe6783a2b33d0c1fefb725b2dd2d00debd7e6')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --libexecdir=/usr/lib/$pkgname --disable-static \
-    --enable-exchange --enable-facebook --enable-flickr \
-    --enable-google --enable-imap-smtp --enable-kerberos \
-    --enable-owncloud --enable-telepathy --enable-windows-live \
-    --enable-media-server --enable-foursquare
+  ./configure \
+    --prefix=/usr \
+    --libexecdir=/usr/lib/$pkgname \
+    --disable-static \
+    --enable-exchange \
+    --enable-facebook \
+    --enable-flickr \
+    --enable-google \
+    --enable-imap-smtp \
+    --enable-kerberos \
+    --enable-owncloud \
+    --enable-telepathy \
+    --enable-windows-live \
+    --enable-media-server \
+    --enable-foursquare
   make
 }
 

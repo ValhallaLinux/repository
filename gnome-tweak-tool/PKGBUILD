@@ -18,7 +18,9 @@ sha256sums=('b1e403725c3489be07e1d754f044d1128eddb38204a344bbe0baa523d531bd64')
 build() {
   cd "$pkgname-$pkgver"
 
-  PYTHON=/usr/bin/python2 ./configure --prefix=/usr --libexecdir=/usr/lib/$pkgname
+  PYTHON=/usr/bin/python2 ./configure \
+    --prefix=/usr \
+    --libexecdir=/usr/lib/$pkgname
   make
 }
 

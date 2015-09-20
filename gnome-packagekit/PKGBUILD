@@ -17,10 +17,11 @@ sha256sums=('ff0b05991ac826b16d27bcbf53e9a079d0ae4f2e736675616fe63db87d2b73fa')
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr \
-	      --sysconfdir=/etc \
-	      --disable-schemas-compile \
-              PYTHON=/usr/bin/python2
+  ./configure \
+    --prefix=/usr \
+	--sysconfdir=/etc \
+	--disable-schemas-compile \
+    PYTHON=/usr/bin/python2
   make
 }
 

@@ -32,10 +32,13 @@ prepare() {
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --libexecdir=/usr/lib/gnome-shell \
-      --localstatedir=/var --disable-static \
-      --disable-schemas-compile
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --libexecdir=/usr/lib/gnome-shell \
+    --localstatedir=/var \
+    --disable-static \
+    --disable-schemas-compile
 
   # https://bugzilla.gnome.org/show_bug.cgi?id=655517
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
