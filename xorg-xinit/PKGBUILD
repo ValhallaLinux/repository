@@ -34,7 +34,9 @@ prepare() {
 build() {
   cd xinit-${pkgver}
   autoreconf -fi
-  ./configure --prefix=/usr --with-xinitdir=/etc/X11/xinit
+  ./configure \
+    --prefix=/usr \
+    --with-xinitdir=/etc/X11/xinit
   make
 }
 

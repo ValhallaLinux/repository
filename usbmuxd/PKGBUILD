@@ -17,7 +17,9 @@ md5sums=('34361c59320cb0b1f9ebcd2798ee1b39')
 
 build() {
   cd usbmuxd-$pkgver
-  ./configure --prefix=/usr --sbindir=/usr/bin
+  ./configure \
+    --prefix=/usr \
+    --sbindir=/usr/bin
   make
 }
 

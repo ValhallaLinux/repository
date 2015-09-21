@@ -62,13 +62,14 @@ build() {
    # we use temporary prefix to avoid messing the existing
    # $pkgdir/usr/share/texmf tree
    # system zlib is disabled due to issues with zlib 1.2.6 (FS#28221)
-   ../configure --prefix=/usr -C \
+   ../configure \
+     --prefix=/usr -C \
      --sysconfdir=/etc \
      --datarootdir=/usr/share \
      --datadir=/usr/share \
      --mandir=/usr/share/man \
      --disable-native-texlive-build \
-     --with-banner-add="/Arch Linux" \
+     --with-banner-add="/Valhalla Linux" \
      --disable-multiplatform \
      --disable-dialog \
      --disable-psutils \
@@ -98,7 +99,9 @@ build() {
      --disable-aleph \
      --enable-luatex \
      --with-clisp-runtime=default \
-     --enable-xindy --disable-xindy-rules --disable-xindy-docs
+     --enable-xindy \
+     --disable-xindy-rules \
+     --disable-xindy-docs
    #############################################################
    ### make
    echo "-------------------------------------------------------"

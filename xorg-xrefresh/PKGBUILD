@@ -17,7 +17,8 @@ sha256sums=('3213671b0a8a9d1e8d1d5d9e3fd86842c894dd9acc1be2560eda50bc1fb791d6')
 
 build() {
   cd "${srcdir}/xrefresh-${pkgver}"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

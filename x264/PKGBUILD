@@ -30,8 +30,10 @@ prepare() {
 
 build() {
   cd $pkgname
-  ./configure --prefix=/usr \
-    --enable-shared --enable-pic
+  ./configure \
+    --prefix=/usr \
+    --enable-shared \
+    --enable-pic
   make
 
   cd ../$pkgname-10bit

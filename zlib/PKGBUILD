@@ -20,7 +20,8 @@ prepare() {
 
 build() {
 	cd ${srcdir}/zlib-$pkgver
-	./configure --prefix=/usr
+	./configure \
+	  --prefix=/usr
 	make
 }
 

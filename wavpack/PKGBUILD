@@ -14,7 +14,10 @@ sha1sums=('7bf2022c988c19067196ee1fdadc919baacf46d1')
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr --libdir=/usr/lib --enable-mmx
+  ./configure \
+    --prefix=/usr \
+    --libdir=/usr/lib \
+    --enable-mmx
   make
 }
 

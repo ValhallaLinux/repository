@@ -19,7 +19,8 @@ groups=('xorg-apps' 'xorg')
 
 build() {
 	cd xev-${pkgver}
-	./configure --prefix=/usr
+	./configure \
+	  --prefix=/usr
 	make
 }
 

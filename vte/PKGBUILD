@@ -31,10 +31,14 @@ build() {
   #warning: type-punning to incomplete type might break strict-aliasing rules
   export CFLAGS="$CFLAGS -fno-strict-aliasing"
 
-  PYTHON=/usr/bin/python2 ./configure --prefix=/usr --sysconfdir=/etc \
-      --libexecdir=/usr/lib/vte \
-      --localstatedir=/var --disable-static \
-      --enable-introspection --with-gtk=2.0
+  PYTHON=/usr/bin/python2 ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --libexecdir=/usr/lib/vte \
+    --localstatedir=/var \
+    --disable-static \
+    --enable-introspection \
+    --with-gtk=2.0
   make
 }
 

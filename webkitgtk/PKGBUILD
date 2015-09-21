@@ -46,7 +46,8 @@ _build() (
   _ver="$1"; shift
   cd build-${_ver}
 
-  ../$pkgbase-$pkgver/configure --prefix=/usr \
+  ../$pkgbase-$pkgver/configure \
+    --prefix=/usr \
     --libexecdir=/usr/lib/webkit${_ver} \
     --enable-introspection \
     --disable-webkit2 \

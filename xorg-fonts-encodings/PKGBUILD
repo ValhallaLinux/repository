@@ -16,7 +16,8 @@ sha1sums=('24ace2470403f85a0d393769204029bd8247992a')
 
 build() {
   cd "${srcdir}/encodings-${pkgver}"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

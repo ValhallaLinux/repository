@@ -17,8 +17,12 @@ source=(http://hal.freedesktop.org/releases/${pkgname}-${pkgver}.tar.gz
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-      --libexecdir=/usr/lib/udisks --disable-static
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib/udisks \
+    --disable-static
 
   patch -p1 < ../drop-pci-db.patch
 

@@ -20,7 +20,9 @@ validpgpkeys=('90D027AEAF33CBABC140735BC1F5D3CDF5176580') #  Thomas Hellstrom (V
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr --enable-vmwarectrl-client
+  ./configure \
+    --prefix=/usr \
+    --enable-vmwarectrl-client
   make
 }
 

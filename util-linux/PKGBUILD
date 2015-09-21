@@ -27,20 +27,21 @@ md5sums=('9bdf368c395f1b70325d0eb22c7f48fb'
 build() {
   cd "$pkgname-$pkgver"
 
-  ./configure --prefix=/usr \
-              --libdir=/usr/lib \
-              --bindir=/usr/bin \
-              --localstatedir=/run \
-              --enable-fs-paths-extra=/usr/bin \
-              --enable-raw \
-              --enable-vipw \
-              --enable-newgrp \
-              --enable-chfn-chsh \
-              --enable-write \
-              --enable-mesg \
-              --enable-libmount-force-mountinfo \
-              --enable-socket-activation \
-              --with-python=3
+  ./configure \
+    --prefix=/usr \
+    --libdir=/usr/lib \
+    --bindir=/usr/bin \
+    --localstatedir=/run \
+    --enable-fs-paths-extra=/usr/bin \
+    --enable-raw \
+    --enable-vipw \
+    --enable-newgrp \
+    --enable-chfn-chsh \
+    --enable-write \
+    --enable-mesg \
+    --enable-libmount-force-mountinfo \
+    --enable-socket-activation \
+    --with-python=3
 
   make
 }

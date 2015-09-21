@@ -19,7 +19,8 @@ validpgpkeys=('3BB639E56F861FA2E86505690FDD682D974CA72A') # Matt Turner <mattst8
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

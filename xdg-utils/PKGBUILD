@@ -28,7 +28,9 @@ pkgver() {
 
 build() {
 	cd xdg-utils*
-	./configure --prefix=/usr --mandir=/usr/share/man
+	./configure \
+	  --prefix=/usr \
+	  --mandir=/usr/share/man
 #	make scripts-clean -C scripts # needed if it's a git snapshot
 #	make man scripts -C scripts # needed if it's a git snapshot
 	make # for release builds

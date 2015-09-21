@@ -17,7 +17,8 @@ sha256sums=('04cfb60366008d4db815c550d8fb8d0a4270c75fa7a20fa3bddc9ecbd355612c')
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr \
+  ./configure \
+    --prefix=/usr \
     --with-udev-rules-dir=/usr/lib/udev/rules.d
   make
 }

@@ -16,10 +16,10 @@ sha1sums=('931a7a99a0b8ca03c28cd277525c5176dd7e02ce')
 build() {
 	cd $pkgname-$pkgver
 	./configure \
-		--prefix=/usr \
-		--libexecdir=/usr/lib/weston \
-		--enable-libinput-backend \
-		--enable-demo-clients-install
+	  --prefix=/usr \
+	  --libexecdir=/usr/lib/weston \
+	  --enable-libinput-backend \
+	  --enable-demo-clients-install
 	make
 }
 

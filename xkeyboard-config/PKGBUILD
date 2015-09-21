@@ -18,10 +18,11 @@ sha256sums=('dc91458a214c56a35727f9e523fc647615de64137057ca6ee4d4d4474a4bb2ae')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
-  ./configure --prefix=/usr \
-      --with-xkb-base=/usr/share/X11/xkb \
-      --with-xkb-rules-symlink=xorg \
-      --enable-compat-rules=yes
+  ./configure \
+    --prefix=/usr \
+    --with-xkb-base=/usr/share/X11/xkb \
+    --with-xkb-rules-symlink=xorg \
+    --enable-compat-rules=yes
   make
  }
  

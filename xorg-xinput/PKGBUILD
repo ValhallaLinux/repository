@@ -16,7 +16,8 @@ sha256sums=('b7632d0f228a8a6be93b09857ea413940fcf44091e60f4a0fe9f5fd82efd871f')
 
 build() {
   cd "${srcdir}/xinput-${pkgver}"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

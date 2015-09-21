@@ -18,7 +18,9 @@ md5sums=('d6fcde2d021899bc93f987cd6819a233')
 build() {
   cd multicoreware-x265-*/build/linux
   [[ $CARCH == x86_64 ]] && LDFLAGS+=',-z,noexecstack'
-  cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/usr ../../source
+  cmake -G "Unix Makefiles" \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    ../../source
   make
 }
 

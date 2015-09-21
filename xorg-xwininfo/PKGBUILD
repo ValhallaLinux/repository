@@ -17,7 +17,8 @@ sha256sums=('218eb0ea95bd8de7903dfaa26423820c523ad1598be0751d2d8b6a2c23b23ff8')
 
 build() {
   cd "${srcdir}/xwininfo-${pkgver}"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

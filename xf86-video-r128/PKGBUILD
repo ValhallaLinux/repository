@@ -20,7 +20,8 @@ validpgpkeys=('6EA3F3F3B9082632A9CBE931D53A0445B47A0DAB') # Connor Behan <connor
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

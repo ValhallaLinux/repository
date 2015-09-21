@@ -20,7 +20,8 @@ build() {
   cd luit-${pkgver}
   patch -Np1 -i $srcdir/git_fixes.diff
   autoreconf -vfi
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

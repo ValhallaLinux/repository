@@ -16,7 +16,9 @@ sha256sums=('73827b6bbfc9d27ca287d95a1224c306d7053cd7b8156641698d7dc541ca565b')
 
 build() {
   cd "${srcdir}/xrdb-${pkgver}"
-  ./configure --prefix=/usr --with-cpp=/usr/bin/mcpp
+  ./configure \
+    --prefix=/usr \
+    --with-cpp=/usr/bin/mcpp
   make
 }
 

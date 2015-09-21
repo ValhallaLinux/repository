@@ -17,7 +17,8 @@ sha256sums=('31c8910f54eb175a8a74a60e7662697467e21a8bf948220a6048a93924b3f66c')
 
 build() {
   cd xcursorgen-${pkgver}
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

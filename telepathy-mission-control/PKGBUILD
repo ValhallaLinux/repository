@@ -19,12 +19,14 @@ md5sums=('af583c41b97c649c37eebba1f2113427')
 
 build() {
     cd "$pkgname-$pkgver"
-    PYTHON=python2 ./configure --prefix=/usr --libexecdir=/usr/lib/telepathy \
-        --with-connectivity=nm \
-        --enable-gtk-doc \
-        --disable-upower \
-        --disable-static \
-        --disable-schemas-compile
+    PYTHON=python2 ./configure \
+      --prefix=/usr \
+      --libexecdir=/usr/lib/telepathy \
+      --with-connectivity=nm \
+      --enable-gtk-doc \
+      --disable-upower \
+      --disable-static \
+      --disable-schemas-compile
     make
 }
 

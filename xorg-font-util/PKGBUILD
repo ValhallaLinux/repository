@@ -22,10 +22,10 @@ build() {
 	cd "${srcdir}/font-util-${pkgver}"
 
 	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--with-mapdir=/usr/share/fonts/util \
-		--with-fontrootdir=/usr/share/fonts \
+	  --prefix=/usr \
+	  --mandir=/usr/share/man \
+	  --with-mapdir=/usr/share/fonts/util \
+	  --with-fontrootdir=/usr/share/fonts \
 
 	make
 }

@@ -18,12 +18,14 @@ md5sums=('7516e6f6fa56a61054413a03642b938d')
 
 build() {
     cd "$pkgname-$pkgver"
-    ./configure --prefix=/usr \
-    	--libexecdir=/usr/lib/telepathy \
-        --disable-plugins --disable-Werror \
-        --with-tls=openssl \
-        --enable-avahi-tests=no \
-        --enable-static=no
+    ./configure \
+      --prefix=/usr \
+      --libexecdir=/usr/lib/telepathy \
+      --disable-plugins \
+      --disable-Werror \
+      --with-tls=openssl \
+      --enable-avahi-tests=no \
+      --enable-static=no
     make
 }
 

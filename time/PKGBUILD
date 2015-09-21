@@ -37,7 +37,9 @@ prepare() {
 build() {
   cd "$pkgname-$pkgver"
 
-  ./configure --prefix=/usr --infodir=/usr/share/info
+  ./configure \
+    --prefix=/usr \
+    --infodir=/usr/share/info
   make
 }
 

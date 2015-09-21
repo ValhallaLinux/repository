@@ -20,10 +20,11 @@ validpgpkeys=('1B5A1BA811AAF0F12169E28AAC558671711E31B1')  # Guillaume Desmottes
 
 build() {
     cd $pkgname-$pkgver
-    PYTHON=/usr/bin/python2 ./configure --prefix=/usr \
-        --libexecdir=/usr/lib/telepathy \
-        --enable-vala-bindings \
-        --enable-static=no
+    PYTHON=/usr/bin/python2 ./configure \
+      --prefix=/usr \
+      --libexecdir=/usr/lib/telepathy \
+      --enable-vala-bindings \
+      --enable-static=no
     make
 }
 

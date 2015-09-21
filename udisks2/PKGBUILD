@@ -21,10 +21,13 @@ validpgpkeys=('3DB46B55EFA59D40E6232148D14EF15DAFE11347')  # Martin Pitt
 
 build() {
   cd udisks-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc \
-      --sbindir=/usr/bin \
-      --with-systemdsystemunitdir=/usr/lib/systemd/system \
-      --localstatedir=/var --disable-static
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --sbindir=/usr/bin \
+    --with-systemdsystemunitdir=/usr/lib/systemd/system \
+    --localstatedir=/var \
+    --disable-static
   make
 }
 

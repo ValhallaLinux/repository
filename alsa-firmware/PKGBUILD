@@ -10,6 +10,7 @@ arch=('any')
 url="http://alsa-project.org/"
 license=('GPL')
 source=(ftp://ftp.alsa-project.org/pub/firmware/$pkgname-$pkgver.tar.bz2)
+sha256sums=()
 options=(!strip)
 
 build() {

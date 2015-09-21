@@ -29,7 +29,11 @@ EOF
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr --sysconfdir=/etc --enable-nls --with-ssl=openssl
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --enable-nls \
+    --with-ssl=openssl
   make
 }
 

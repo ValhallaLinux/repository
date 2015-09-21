@@ -18,7 +18,9 @@ md5sums=('09038d4625fcf81e9d3228ebf18bc378')
 
 build() {
   cd "$pkgname-$pkgver"
-  ./configure --prefix=/usr --libexecdir=/usr/lib/telepathy
+  ./configure \
+    --prefix=/usr \
+    --libexecdir=/usr/lib/telepathy
   make
 }
 

@@ -16,10 +16,14 @@ install=viewnior.install
 source=(https://github.com/xsisqox/Viewnior/archive/viewnior-$pkgver.tar.gz)
 md5sums=('3cecdc212724d5963257bebf025943f5')
 
+prepare() {
+   cd Viewnior-viewnior-$pkgver
+  ./autogen.sh
+}
 build() {
   cd Viewnior-viewnior-$pkgver
-  ./autogen.sh
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

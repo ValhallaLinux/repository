@@ -3,7 +3,7 @@
 
 pkgname=appdata-tools
 pkgver=0.1.8
-pkgrel=2
+pkgrel=1
 pkgdesc="command line program designed to validate AppData descriptions for standards compliance and to the style guide"
 arch=('i686' 'x86_64')
 url="https://github.com/hughsie/appdata-tools/"
@@ -11,7 +11,7 @@ license=('GPL')
 depends=('appstream-glib' 'libsoup' 'gdk-pixbuf2')
 makedepends=('intltool')
 source=(http://people.freedesktop.org/~hughsient/releases/appdata-tools-$pkgver.tar.xz)
-md5sums=('47d8500b7b96fac6667c3173c77c1e66')
+sha256sums=('47d8500b7b96fac6667c3173c77c1e66')
 
 build() {
   cd $pkgname-$pkgver

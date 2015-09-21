@@ -51,39 +51,40 @@ prepare() {
 build() {
   cd "${pkgbase}-${pkgver}"
   autoreconf -fi
-  ./configure --prefix=/usr \
-      --enable-ipv6 \
-      --enable-dri \
-      --enable-dmx \
-      --enable-xvfb \
-      --enable-xnest \
-      --enable-composite \
-      --enable-xcsecurity \
-      --enable-libunwind \
-      --enable-xorg \
-      --enable-xephyr \
-      --enable-glamor \
-      --enable-xwayland \
-      --enable-glx-tls \
-      --enable-kdrive \
-      --enable-kdrive-evdev \
-      --enable-kdrive-kbd \
-      --enable-kdrive-mouse \
-      --enable-config-udev \
-      --enable-systemd-logind \
-      --enable-suid-wrapper \
-      --disable-install-setuid \
-      --enable-record \
-      --disable-xfbdev \
-      --disable-xfake \
-      --disable-static \
-      --libexecdir=/usr/lib/xorg-server \
-      --sysconfdir=/etc \
-      --localstatedir=/var \
-      --with-xkb-path=/usr/share/X11/xkb \
-      --with-xkb-output=/var/lib/xkb \
-      --with-fontrootdir=/usr/share/fonts \
-      --with-sha1=libgcrypt
+  ./configure \
+    --prefix=/usr \
+    --enable-ipv6 \
+    --enable-dri \
+    --enable-dmx \
+    --enable-xvfb \
+    --enable-xnest \
+    --enable-composite \
+    --enable-xcsecurity \
+    --enable-libunwind \
+    --enable-xorg \
+    --enable-xephyr \
+    --enable-glamor \
+    --enable-xwayland \
+    --enable-glx-tls \
+    --enable-kdrive \
+    --enable-kdrive-evdev \
+    --enable-kdrive-kbd \
+    --enable-kdrive-mouse \
+    --enable-config-udev \
+    --enable-systemd-logind \
+    --enable-suid-wrapper \
+    --disable-install-setuid \
+    --enable-record \
+    --disable-xfbdev \
+    --disable-xfake \
+    --disable-static \
+    --libexecdir=/usr/lib/xorg-server \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --with-xkb-path=/usr/share/X11/xkb \
+    --with-xkb-output=/var/lib/xkb \
+    --with-fontrootdir=/usr/share/fonts \
+    --with-sha1=libgcrypt
       
 #      --without-dtrace \
 #      --disable-linux-acpi --disable-linux-apm \

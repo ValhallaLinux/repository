@@ -16,7 +16,8 @@ sha1sums=('0645404e9aa2c9f979e4d006c483633bf6cfc2d9')
 
 build() {
   cd "${srcdir}/xpr-${pkgver}"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

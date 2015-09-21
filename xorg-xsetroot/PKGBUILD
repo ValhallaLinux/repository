@@ -16,7 +16,8 @@ sha256sums=('ba215daaa78c415fce11b9e58c365d03bb602eaa5ea916578d76861a468cc3d9')
 
 build() {
   cd "${srcdir}/xsetroot-${pkgver}"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

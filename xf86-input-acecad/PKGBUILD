@@ -19,7 +19,8 @@ sha1sums=('410cee68e4435dc95774fb389fcefae1b2ffe3d1'
 build() {
   cd ${pkgname}-${pkgver}
   patch -Np1 -i "${srcdir}/assign-local-private-after-allocating.patch"
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 

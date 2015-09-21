@@ -33,10 +33,14 @@ prepare() {
 
 build() {
   cd build
-  cmake -DPORT=GTK -DCMAKE_BUILD_TYPE=Release \
-        -DCMAKE_SKIP_RPATH=ON -DCMAKE_INSTALL_PREFIX=/usr \
-        -DLIB_INSTALL_DIR=/usr/lib -DLIBEXEC_INSTALL_DIR=/usr/lib/webkit2gtk-4.0 \
-        -DENABLE_GTKDOC=ON ../webkitgtk-$pkgver
+  cmake -DPORT=GTK \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_SKIP_RPATH=ON \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DLIB_INSTALL_DIR=/usr/lib \
+    -DLIBEXEC_INSTALL_DIR=/usr/lib/webkit2gtk-4.0 \
+    -DENABLE_GTKDOC=ON \
+    ../webkitgtk-$pkgver
   make
 }
 

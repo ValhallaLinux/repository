@@ -30,7 +30,8 @@ build() {
   # * enable MatchDevicePath directive by default - FS#33291
   patch -Np1 -i ${srcdir}/add_tapbuttons.diff
   
-  ./configure --prefix=/usr
+  ./configure \
+    --prefix=/usr
   make
 }
 
