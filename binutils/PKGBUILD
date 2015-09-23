@@ -6,9 +6,8 @@
 # build from head of release branch as bug fix releases are rare
 
 pkgname=binutils
-pkgver=2.25
-pkgrel=5
-_commit=69352378
+pkgver=2.25.1
+pkgrel=1
 pkgdesc="A set of programs to assemble and manipulate binary and object files"
 arch=('i686' 'x86_64')
 url="http://www.gnu.org/software/binutils/"
@@ -21,7 +20,7 @@ conflicts=('binutils-multilib')
 replaces=('binutils-multilib')
 options=('staticlibs' '!distcc' '!ccache')
 install=binutils.install
-source=("http://ftp.gnu.org/gnu/binutils/binutils-2.25.1.tar.bz2"
+source=("http://ftp.gnu.org/gnu/binutils/${pkgname}-${pkgver}.tar.bz2"
         "binutils-e9c1bdad.patch")
 sha256sums=('1d597ae063e3947a5f61e23ceda8aebf78405fcd'
          'eb3aceaab8ed26e06d505f82beb30f8f')
