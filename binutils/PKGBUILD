@@ -26,7 +26,7 @@ sha256sums=('b5b14added7d78a8d1ca70b5cb75fef57ce2197264f4f5835326b0df22ac9f22'
             '4dc13852d61825aa59b7436ae41c449d181e5a66b355b6ca69604e4da3e03699')
 
 prepare() {
-  cd ${srcdir}/binutils-gdb
+  cd ${srcdir}/${pkgname}-${pkgver}
 
   # https://sourceware.org/bugzilla/show_bug.cgi?id=16992
   patch -p1 -i ${srcdir}/binutils-e9c1bdad.patch
