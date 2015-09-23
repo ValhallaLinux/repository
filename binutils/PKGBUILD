@@ -14,7 +14,7 @@ url="http://www.gnu.org/software/binutils/"
 license=('GPL')
 groups=('base-devel')
 depends=('glibc>=2.20' 'zlib')
-makedepends=('git')
+#makedepends=('git')
 #checkdepends=('dejagnu' 'bc')
 conflicts=('binutils-multilib')
 replaces=('binutils-multilib')
@@ -23,7 +23,7 @@ install=binutils.install
 source=("http://ftp.gnu.org/gnu/binutils/${pkgname}-${pkgver}.tar.bz2"
         "binutils-e9c1bdad.patch")
 sha256sums=('b5b14added7d78a8d1ca70b5cb75fef57ce2197264f4f5835326b0df22ac9f22'
-            '6617d2c5dee69592839f656a0bc3f8e24bffa9e99b832e611de240fa8b44800b')
+            '4dc13852d61825aa59b7436ae41c449d181e5a66b355b6ca69604e4da3e03699')
 
 prepare() {
   cd ${srcdir}/binutils-gdb
@@ -40,7 +40,7 @@ prepare() {
 build() {
   cd ${srcdir}/binutils-build
 
-  ${srcdir}/binutils-gdb/configure \
+  ${srcdir}/${pkgname}-${pkgver}/configure \
     --prefix=/usr \
     --with-lib-path=/usr/lib:/usr/local/lib \
     --with-bugurl=https://github.com/ValhallaLinux/repository/issues \
