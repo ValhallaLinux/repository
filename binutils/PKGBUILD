@@ -22,8 +22,8 @@ options=('staticlibs' '!distcc' '!ccache')
 install=binutils.install
 source=("http://ftp.gnu.org/gnu/binutils/${pkgname}-${pkgver}.tar.bz2"
         "binutils-e9c1bdad.patch")
-sha256sums=('1d597ae063e3947a5f61e23ceda8aebf78405fcd'
-         'eb3aceaab8ed26e06d505f82beb30f8f')
+sha256sums=('b5b14added7d78a8d1ca70b5cb75fef57ce2197264f4f5835326b0df22ac9f22'
+            '6617d2c5dee69592839f656a0bc3f8e24bffa9e99b832e611de240fa8b44800b')
 
 prepare() {
   cd ${srcdir}/binutils-gdb
