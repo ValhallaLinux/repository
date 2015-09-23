@@ -23,7 +23,7 @@ source=(ftp://gcc.gnu.org/pub/gcc/releases/gcc-${pkgver}/gcc-${pkgver}.tar.bz2
         pr66035.patch)
 sha256sums=('5f835b04b5f7dd4f4d2dc96190ec1621b8d89f2dc6f638f9f8bc1b1014ba8cad'
             '1f20561843eb9f6ae2076800bc45f3680ff7696520257cd5734ccfb843464cae'
-            'e2528e3620aa873bc3cb63c3cf509d3ff2659fa17cdd27f88f40c15846f899cc')
+            '990d9a77419071b54cbd1ea3e59786359b030553118037fa8b1cedc5bb072122')
 
 if [ -n "${_snapshot}" ]; then
   _basedir=gcc-${_snapshot}
