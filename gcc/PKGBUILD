@@ -74,6 +74,7 @@ build() {
     --with-pkgverson="Valhalla Linux"
     --enable-languages=c,c++,fortran,go,lto,objc,obj-c++ \
     --enable-shared \
+    --disable-multilib \
     --enable-threads=posix \
     --enable-libmpx \
     --with-system-zlib \
