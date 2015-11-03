@@ -6,7 +6,7 @@
 
 pkgname=bluez-firmware
 pkgver=1.2
-pkgrel=8
+pkgrel=1
 pkgdesc="Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips"
 url="http://www.bluez.org/"
 arch=('any')
