@@ -20,7 +20,8 @@ validpgpkeys=('2B7C1A53420D4AF3BFF4738BF382AE19F4850180')
 
 build() {
   cd autoconf-$pkgver
-  ./configure --prefix="/opt/autoconf/$pkgver"
+  ./configure \
+    --prefix="/opt/autoconf/$pkgver"
   make
 }
 

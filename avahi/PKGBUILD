@@ -28,7 +28,7 @@ sha1sums=('SKIP')
 conflicts=('howl' 'mdnsresponder')
 provides=('howl' 'mdnsresponder')
 
-install=install
+install=avahi.install
 
 prepare() {
 	cd "${srcdir}/${pkgname}" #-${pkgver}"
