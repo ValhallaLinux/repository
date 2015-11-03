@@ -3,7 +3,7 @@
 # Contributor: Brice Carpentier <brice@daknet.org>
 
 pkgname=cairo
-pkgver=1.14.2
+pkgver=1.14.4
 pkgrel=1
 pkgdesc="Cairo vector graphics library"
 arch=(i686 x86_64)
@@ -17,7 +17,7 @@ makedepends=('mesa-libgl' 'librsvg' 'gtk2' 'poppler-glib' 'libspectre' 'gtk-doc'
 provides=('cairo-xcb')
 replaces=('cairo-xcb')
 source=(http://cairographics.org/releases/cairo-$pkgver.tar.xz)
-sha1sums=('c8da68aa66ca0855b5d0ff552766d3e8679e1d24')
+sha1sums=('5b44471e7c328f96de6830baf8ea65030de797f9')
 
 build() {
   cd $pkgname-$pkgver
@@ -34,18 +34,18 @@ build() {
 	--enable-pdf \
 	--enable-gobject \
     --enable-gtk-doc
-	
+
 	#--disable-xlib-xcb \
 	#--enable-test-surfaces \ takes ages
 	#--enable-drm # breaks build
-	
+
   make
 }
 
 check() {
   cd $pkgname-$pkgver
   #make -j1 -k test || /bin/true
-  
+
   # results:
   # 1.12.8-1	# 162 Passed, 328 Failed [  8 crashed, 10 expected], 26 Skipped
   # 1.12.12-2:	#  29 Passed, 464 Failed [460 crashed,  2 expected], 26 Skipped
